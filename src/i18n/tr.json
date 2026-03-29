@@ -7,7 +7,6 @@
   "hero": {
     "available": "Yeni fırsatlara açık",
     "title": "Full-Stack Geliştirici",
-    "tagline": "Türkiye'den IT deneyimine sahip, yazılım geliştirme tutkusu taşıyan motivasyonlu bir Junior Developer'ım. Meslek eğitimimi kısa süre önce başarıyla tamamladım ve modern web teknolojilerindeki bilgimi pekiştirdim. Çocukluğumdan beri bilgisayarlar ve teknik problemleri çözmek beni hep heyecanlandırdı. Şimdi kendimi profesyonel olarak geliştirmeye ve pratik projelere katkıda bulunmaya hazırım.",
     "downloadCv": "CV İNDİR",
     "getInTouch": "İLETİŞİM"
   },
@@ -22,7 +21,13 @@
   "about": {
     "label": "Kişi",
     "title": "Digital Craftsman",
+    "bio": "Türkiye'den IT tecrübesi olan ve yazılım geliştirmeye büyük tutku duyan motivasyonlu bir Junior Developer'ım. Kısa bir süre önce meslek eğitimimi başarıyla tamamladım ve modern web teknolojilerindeki becerilerimi daha da geliştirdim. Çocukluğumdan beri bilgisayarlara ve teknik sorunları çözmeye ilgi duyuyorum. Şimdi kendimi mesleki olarak geliştirmeyi ve pratik projelerde katkıda bulunmayı sabırsızlıkla bekliyorum.",
     "languages": "Diller",
+    "levels": {
+      "tr": "Ana Dil",
+      "de": "B1",
+      "en": "A2"
+    },
     "frontend": "Frontend",
     "backend": "Backend",
     "database": "Veritabanı",

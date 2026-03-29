@@ -32,14 +32,9 @@ export default function About() {
             <h2 className="text-5xl font-headline font-bold tracking-tight">
               {t("about.title")}
             </h2>
-            {profile.bio.map((paragraph, i) => (
-              <p
-                key={i}
-                className="text-on-surface-variant leading-relaxed text-lg"
-              >
-                {paragraph}
-              </p>
-            ))}
+            <p className="text-on-surface-variant leading-relaxed text-lg">
+              {t("about.bio")}
+            </p>
           </div>
           <div className="space-y-4">
             <h4 className="font-label uppercase tracking-widest text-xs text-slate-400">
@@ -50,7 +45,7 @@ export default function About() {
                 <div key={lang.code} className="flex items-center gap-3">
                   <span className="text-2xl">{lang.flag}</span>
                   <span className="font-body font-medium">
-                    {lang.name} ({lang.level})
+                    {lang.name} ({t(`about.levels.${lang.code}`)})
                   </span>
                 </div>
               ))}

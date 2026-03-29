@@ -19,9 +19,6 @@ export default function Hero() {
               {t("hero.title")}
             </p>
           </div>
-          <p className="text-lg text-on-surface-variant max-w-lg leading-relaxed font-body">
-            {t("hero.tagline")}
-          </p>
           <div className="flex flex-wrap gap-4 pt-4">
             <a
               href={profile.cvUrl}
