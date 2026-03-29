@@ -1,0 +1,59 @@
+{
+  "nav": {
+    "projects": "Projects",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "available": "Available for new opportunities",
+    "title": "Full-Stack Developer",
+    "tagline": "Crafting high-performance digital architectures with a focus on scalability and elegant user experiences. Specializing in modern web ecosystems.",
+    "downloadCv": "DOWNLOAD CV",
+    "getInTouch": "GET IN TOUCH"
+  },
+  "projects": {
+    "label": "Selected Works",
+    "title": "Projects",
+    "github": "GITHUB",
+    "liveDemo": "LIVE DEMO",
+    "video": "VIDEO",
+    "viewProject": "VIEW PROJECT"
+  },
+  "about": {
+    "label": "The Persona",
+    "title": "Digital Craftsman",
+    "languages": "Languages",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "database": "Database",
+    "devops": "DevOps"
+  },
+  "contact": {
+    "label": "Initiate Connection",
+    "title": "Get In Touch",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "SEND MESSAGE"
+  },
+  "footer": {
+    "rights": "© 2026 FURKAN B. DIGITAL CRAFTSMAN. ALL RIGHTS RESERVED."
+  },
+  "projectDetail": {
+    "notFound": "Project not found",
+    "backHome": "BACK",
+    "viewSource": "View Source on GitHub",
+    "playVideo": "Play video",
+    "challenge": "The Technical Challenge",
+    "impact": "Personal Impact & Learning",
+    "process": "Process & Development",
+    "processDescription": "Documenting the iterative journey from architectural blueprints to production-ready code.",
+    "architecture": "The Architecture",
+    "architectureDescription": "Engineered with modern, industry-standard infrastructure.",
+    "openForOpportunities": "Open for New Opportunities",
+    "ctaTitle": "Interested in a deep dive?",
+    "ctaDescription": "I'm currently looking for new challenges where I can apply my expertise. Let's talk about how I can contribute to your team.",
+    "discuss": "Discuss this Project",
+    "connect": "Connect with me"
+  }
+}

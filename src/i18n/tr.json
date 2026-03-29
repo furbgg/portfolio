@@ -1,0 +1,59 @@
+{
+  "nav": {
+    "projects": "Projeler",
+    "about": "Hakkımda",
+    "contact": "İletişim"
+  },
+  "hero": {
+    "available": "Yeni fırsatlara açık",
+    "title": "Full-Stack Geliştirici",
+    "tagline": "Ölçeklenebilirlik ve zarif kullanıcı deneyimlerine odaklanarak yüksek performanslı dijital mimariler oluşturuyorum. Modern web ekosistemlerinde uzmanlaşmış.",
+    "downloadCv": "CV İNDİR",
+    "getInTouch": "İLETİŞİM"
+  },
+  "projects": {
+    "label": "Seçilmiş Çalışmalar",
+    "title": "Projeler",
+    "github": "GITHUB",
+    "liveDemo": "CANLI DEMO",
+    "video": "VİDEO",
+    "viewProject": "PROJEYE GİT"
+  },
+  "about": {
+    "label": "Kişi",
+    "title": "Digital Craftsman",
+    "languages": "Diller",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "database": "Veritabanı",
+    "devops": "DevOps"
+  },
+  "contact": {
+    "label": "Bağlantı Kur",
+    "title": "İletişim",
+    "name": "Ad",
+    "email": "E-Posta",
+    "message": "Mesaj",
+    "send": "MESAJ GÖNDER"
+  },
+  "footer": {
+    "rights": "© 2026 FURKAN B. DIGITAL CRAFTSMAN. TÜM HAKLARI SAKLIDIR."
+  },
+  "projectDetail": {
+    "notFound": "Proje bulunamadı",
+    "backHome": "GERİ",
+    "viewSource": "GitHub'da Kaynak Kodu",
+    "playVideo": "Videoyu oynat",
+    "challenge": "Teknik Zorluk",
+    "impact": "Kişisel Etki & Öğrenim",
+    "process": "Süreç & Geliştirme",
+    "processDescription": "Mimari planlardan üretime hazır koda kadar iteratif yolculuğun belgelenmesi.",
+    "architecture": "Mimari",
+    "architectureDescription": "Modern, sektör standartlarındaki teknolojilerle geliştirilmiştir.",
+    "openForOpportunities": "Yeni Fırsatlara Açık",
+    "ctaTitle": "Detaylı bir inceleme ister misiniz?",
+    "ctaDescription": "Şu anda uzmanlığımı uygulayabileceğim yeni zorluklar arıyorum. Ekibinize nasıl katkıda bulunabileceğimi konuşalım.",
+    "discuss": "Bu Projeyi Tartış",
+    "connect": "Benimle İletişime Geç"
+  }
+}

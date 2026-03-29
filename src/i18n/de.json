@@ -1,0 +1,59 @@
+{
+  "nav": {
+    "projects": "Projekte",
+    "about": "Über mich",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "available": "Offen für neue Möglichkeiten",
+    "title": "Full-Stack Entwickler",
+    "tagline": "Entwicklung hochperformanter digitaler Architekturen mit Fokus auf Skalierbarkeit und elegante Benutzererfahrungen. Spezialisiert auf moderne Web-Ökosysteme.",
+    "downloadCv": "LEBENSLAUF",
+    "getInTouch": "KONTAKT"
+  },
+  "projects": {
+    "label": "Ausgewählte Arbeiten",
+    "title": "Projekte",
+    "github": "GITHUB",
+    "liveDemo": "LIVE DEMO",
+    "video": "VIDEO",
+    "viewProject": "PROJEKT ANSEHEN"
+  },
+  "about": {
+    "label": "Die Person",
+    "title": "Digital Craftsman",
+    "languages": "Sprachen",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "database": "Datenbank",
+    "devops": "DevOps"
+  },
+  "contact": {
+    "label": "Kontakt aufnehmen",
+    "title": "Kontakt",
+    "name": "Name",
+    "email": "E-Mail",
+    "message": "Nachricht",
+    "send": "NACHRICHT SENDEN"
+  },
+  "footer": {
+    "rights": "© 2026 FURKAN B. DIGITAL CRAFTSMAN. ALLE RECHTE VORBEHALTEN."
+  },
+  "projectDetail": {
+    "notFound": "Projekt nicht gefunden",
+    "backHome": "ZURÜCK",
+    "viewSource": "Quellcode auf GitHub",
+    "playVideo": "Video abspielen",
+    "challenge": "Die technische Herausforderung",
+    "impact": "Persönlicher Einfluss & Lerneffekt",
+    "process": "Prozess & Entwicklung",
+    "processDescription": "Dokumentation der iterativen Reise von Architektur-Entwürfen bis zum produktionsreifen Code.",
+    "architecture": "Die Architektur",
+    "architectureDescription": "Entwickelt mit modernen, branchenüblichen Technologien.",
+    "openForOpportunities": "Offen für neue Möglichkeiten",
+    "ctaTitle": "Interesse an einem Deep Dive?",
+    "ctaDescription": "Ich suche derzeit nach neuen Herausforderungen, bei denen ich meine Expertise einsetzen kann. Lassen Sie uns darüber sprechen, wie ich zu Ihrem Team beitragen kann.",
+    "discuss": "Dieses Projekt besprechen",
+    "connect": "Kontakt aufnehmen"
+  }
+}
