@@ -14,7 +14,7 @@ export const profile: Profile = {
   github: "https://github.com/furbgg",
   linkedin: "https://www.linkedin.com/in/furbg/",
   instagram: "https://www.instagram.com/furbg/",
-  cvUrl: "/cv/furkan-berkay-gunaydin-cv.pdf",
+  cvUrl: "/cv/CV FURKAN GUNAYDIN.pdf",
   languages: [
     { code: "de", flag: "\ud83c\udde9\ud83c\uddea", name: "DE", level: "Native" },
     { code: "en", flag: "\ud83c\uddfa\ud83c\uddf8", name: "EN", level: "Fluent" },

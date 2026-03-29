@@ -19,6 +19,9 @@ export const techStack: Tech[] = [
   { key: "kubernetes", name: "Kubernetes", icon: "kubernetes", category: "devops" },
   { key: "cicd", name: "CI/CD", icon: "cicd", category: "devops" },
   { key: "stripe", name: "Stripe", icon: "stripe", category: "other" },
+  { key: "vite", name: "Vite", icon: "vite", category: "frontend" },
+  { key: "spring-security", name: "Spring Security", icon: "spring-security", category: "backend" },
+  { key: "jwt", name: "JWT", icon: "jwt", category: "backend" },
 ];
 
 export function getTechByKey(key: string): Tech | undefined {
