@@ -19,9 +19,16 @@ function getEmbedUrl(url: string): { type: "youtube" | "cloudinary"; src: string
     } else if (url.includes("/embed/")) {
       videoId = url.split("/embed/")[1]?.split("?")[0] ?? "";
     }
-    return { type: "youtube", src: `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0` };
+    return { type: "youtube", src: `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&rel=0` };
   }
-  return { type: "cloudinary", src: url };
+  
+  let cloudinaryUrl = url;
+  if (url.includes("res.cloudinary.com") && url.includes("/upload/")) {
+    // Inject ac_none to completely strip the audio track from Cloudinary videos
+    cloudinaryUrl = url.replace("/upload/", "/upload/ac_none/");
+  }
+  
+  return { type: "cloudinary", src: cloudinaryUrl };
 }
 
 export default function VideoModal({ isOpen, onClose, videoUrl, title, description }: VideoModalProps) {
@@ -89,6 +96,7 @@ export default function VideoModal({ isOpen, onClose, videoUrl, title, descripti
                   className="w-full h-full object-contain"
                   controls
                   autoPlay
+                  muted
                   playsInline
                 />
               )}
