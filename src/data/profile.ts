@@ -10,9 +10,10 @@ export const profile: Profile = {
     "With 6+ years of experience in full-stack ecosystems, I\u2019ve helped startups and established firms build robust digital foundations. I thrive on solving complex technical challenges that require both logic and creativity.",
   ],
   location: "Austria",
-  email: "",
-  github: "https://github.com/",
-  linkedin: "https://linkedin.com/in/",
+  email: "furkanbgunaydin@gmail.com",
+  github: "https://github.com/furbgg",
+  linkedin: "https://www.linkedin.com/in/furbg/",
+  instagram: "https://www.instagram.com/furbg/",
   cvUrl: "/cv/furkan-berkay-gunaydin-cv.pdf",
   languages: [
     { code: "de", flag: "\ud83c\udde9\ud83c\uddea", name: "DE", level: "Native" },

@@ -81,4 +81,5 @@ export interface Profile {
   linkedin: string;
   cvUrl: string;
   languages: { code: string; flag: string; name: string; level: string }[];
+  instagram?: string;
 }

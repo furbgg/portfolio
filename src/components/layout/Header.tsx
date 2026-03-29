@@ -65,7 +65,35 @@ export default function Header() {
           </div>
         )}
 
-        <div className="flex items-center gap-4 text-slate-400">
+        <div className="flex items-center gap-3 text-slate-400">
+          <a
+            href={`mailto:${profile.email}`}
+            className="hover:text-blue-300 transition-all duration-300"
+            aria-label="Email"
+          >
+            <span className="material-symbols-outlined text-xl">mail</span>
+          </a>
+          <a
+            href={profile.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-blue-300 transition-all duration-300"
+            aria-label="LinkedIn"
+          >
+            <span className="material-symbols-outlined text-xl">link</span>
+          </a>
+          {profile.instagram && (
+            <a
+              href={profile.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-blue-300 transition-all duration-300"
+              aria-label="Instagram"
+            >
+              <span className="material-symbols-outlined text-xl">photo_camera</span>
+            </a>
+          )}
+          <div className="w-px h-4 bg-outline-variant/30 mx-1" />
           <button
             onClick={cycleLanguage}
             className="cursor-pointer hover:text-blue-300 transition-all duration-300 flex items-center gap-1"
