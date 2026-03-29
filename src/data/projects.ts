@@ -368,4 +368,28 @@ export const projects: Project[] = [
       ],
     },
   },
+  {
+    slug: "ecommerce-plattform",
+    title: "E-Commerce Plattform",
+    tagline:
+      "Moderne E-Commerce-Plattform für kuratierte Souvenirs und Wohnaccessoires mit hochwertigem Storefront, Kundenbereich, Wunschliste, Checkout, Zahlungsintegration und Admin-Workflow. Bald verfügbar.",
+    description:
+      "Eine moderne Full-Stack E-Commerce-Plattform für handverlesene Souvenirs und Wohnaccessoires mit hochwertigem UI, responsivem Frontend, intelligenter Produktsuche, Wunschliste, Kundenkonto, mehrstufigem Checkout, Zahlungsanbindung, Retourenlogik und Admin-Workflows. Technisch umgesetzt mit React, TypeScript, Tailwind CSS, Java Spring Boot, PostgreSQL, Redis, Stripe, OAuth und automatisierten E-Mail-Prozessen. Bald verfügbar.",
+    techStack: [
+      "react",
+      "typescript",
+      "tailwind",
+      "java",
+      "spring-boot",
+      "postgresql",
+      "stripe",
+      "docker",
+    ],
+    media: {
+      thumbnail: "/projects/ecommerce-plattform/cover.png",
+    },
+    links: {},
+    featured: true,
+    order: 3,
+  },
 ];

@@ -52,55 +52,6 @@ export default function Contact() {
             </span>
           </a>
         </div>
-        <form
-          className="space-y-6 text-left"
-          action=""
-          method="POST"
-        >
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="space-y-2">
-              <label className="font-label uppercase text-[10px] tracking-widest text-slate-500">
-                {t("contact.name")}
-              </label>
-              <input
-                name="name"
-                className="w-full bg-surface-container-lowest border-b-2 border-outline-variant focus:border-primary focus:ring-0 transition-colors text-on-surface py-3 px-0"
-                type="text"
-                required
-              />
-            </div>
-            <div className="space-y-2">
-              <label className="font-label uppercase text-[10px] tracking-widest text-slate-500">
-                {t("contact.email")}
-              </label>
-              <input
-                name="email"
-                className="w-full bg-surface-container-lowest border-b-2 border-outline-variant focus:border-primary focus:ring-0 transition-colors text-on-surface py-3 px-0"
-                type="email"
-                required
-              />
-            </div>
-          </div>
-          <div className="space-y-2">
-            <label className="font-label uppercase text-[10px] tracking-widest text-slate-500">
-              {t("contact.message")}
-            </label>
-            <textarea
-              name="message"
-              className="w-full bg-surface-container-lowest border-b-2 border-outline-variant focus:border-primary focus:ring-0 transition-colors text-on-surface py-3 px-0"
-              rows={4}
-              required
-            />
-          </div>
-          <div className="pt-6 flex justify-center">
-            <button
-              type="submit"
-              className="cta-gradient text-on-primary-container font-label font-bold py-4 px-16 rounded-md hover:scale-105 transition-transform shadow-lg"
-            >
-              {t("contact.send")}
-            </button>
-          </div>
-        </form>
       </div>
     </section>
   );
