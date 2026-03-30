@@ -1,11 +1,12 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import { projects } from "@/data/projects";
+import { getProjects } from "@/data/projects";
 import { getTechByKey } from "@/data/techStack";
 
 export default function Projects() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
+  const projects = getProjects(i18n.language);
   const sortedProjects = [...projects]
     .filter((p) => p.featured)
     .sort((a, b) => a.order - b.order);

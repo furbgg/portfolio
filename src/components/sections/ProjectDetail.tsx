@@ -1,13 +1,14 @@
 import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { projects } from "@/data/projects";
+import { getProjects } from "@/data/projects";
 import { profile } from "@/data/profile";
 import VideoModal from "@/components/ui/VideoModal";
 
 export default function ProjectDetail() {
   const { slug } = useParams<{ slug: string }>();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const projects = getProjects(i18n.language);
   const project = projects.find((p) => p.slug === slug);
 
   const [videoModal, setVideoModal] = useState<{
