@@ -43,7 +43,7 @@ export default function About() {
             <div className="flex flex-wrap gap-6">
               {profile.languages.map((lang) => (
                 <div key={lang.code} className="flex items-center gap-3">
-                  <span className="text-2xl">{lang.flag}</span>
+                  <span className="text-2xl grayscale opacity-90">{lang.flag}</span>
                   <span className="font-body font-medium">
                     {lang.name} ({t(`about.levels.${lang.code}`)})
                   </span>

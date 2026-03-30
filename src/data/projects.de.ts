@@ -11,7 +11,7 @@ export const projects: Project[] = [
     tagline:
       "Full-Stack-Restaurantmanagement-System mit Login, Dashboard, Lagerverwaltung, POS und Mehrsprachigkeit.",
     description:
-      "StockMeister ist mein Abschlussprojekt aus der Ausbildung und wurde als Full-Stack-Restaurantmanagement-System entwickelt. Die Anwendung vereint Login, Dashboard, Lager- und Rezeptverwaltung, Low-Stock-Warnungen, Waste-Management, POS und Mehrsprachigkeit in einer modernen Weboberfl├ñche.",
+      "StockMeister ist mein Abschlussprojekt aus der Ausbildung und wurde als Full-Stack-Restaurantmanagement-System entwickelt. Die Anwendung vereint Login, Dashboard, Lager- und Rezeptverwaltung, Low-Stock-Warnungen, Waste-Management, POS und Mehrsprachigkeit in einer modernen Weboberfläche.",
     techStack: [
       "react",
       "typescript",
@@ -31,37 +31,37 @@ export const projects: Project[] = [
     featured: true,
     order: 1,
     detail: {
-      role: "Abschlussprojekt ÔÇö Full-Stack Entwicklung",
+      role: "Abschlussprojekt — Full-Stack Entwicklung",
       heroImage: "/projects/stockmeister/cover.png",
       heroVideoUrl:
         "https://res.cloudinary.com/din9yr5bk/video/upload/v1774813141/StockMeister_Dashboard_k9pjbn.mp4",
       heroVideoLabel: "Dashboard & Login",
       challenge: [
-        'StockMeister ist mein Abschlussprojekt aus der Ausbildung und ein Full-Stack-Webprojekt f├╝r die Gastronomie. Ziel des Projekts war es, zentrale Abl├ñufe eines Restaurantbetriebs in einer einzigen Anwendung zusammenzuf├╝hren und digital abzubilden.',
-        'Die Anwendung umfasst einen Login-Bereich mit rollenbasierter Zugriffskontrolle, ein Dashboard mit Kennzahlen und ├£bersichten, eine Zutaten- und Rezeptverwaltung, Low-Stock- und Out-of-Stock-Warnungen, Lageranpassungen, Waste-Management sowie ein <span class="text-primary font-medium">POS-System</span> f├╝r Bestellungen und Zahlungen. Zus├ñtzlich unterst├╝tzt das System mehrere Sprachen, darunter Deutsch, Englisch, T├╝rkisch und BHS.',
-        'Technisch habe ich das Projekt mit <span class="text-primary font-medium">React, TypeScript, Vite und Tailwind CSS</span> im Frontend sowie mit <span class="text-primary font-medium">Java 17, Spring Boot, Spring Security, JWT, JPA/Hibernate und PostgreSQL</span> im Backend umgesetzt. Die Kommunikation zwischen Frontend und Backend erfolgt ├╝ber eine REST-API. F├╝r die lokale Entwicklung und das Deployment-Setup habe ich Docker verwendet.',
-        'Besonders wichtig war mir eine praxisnahe und benutzerfreundliche Umsetzung. Bestellungen im POS wirken sich direkt auf den Lagerbestand aus, kritische Best├ñnde werden hervorgehoben, und durch die Mehrsprachigkeit ist die Anwendung auch in einem internationalen Team einsetzbar.',
+        'StockMeister ist mein Abschlussprojekt aus der Ausbildung und ein Full-Stack-Webprojekt für die Gastronomie. Ziel des Projekts war es, zentrale Abläufe eines Restaurantbetriebs in einer einzigen Anwendung zusammenzuführen und digital abzubilden.',
+        'Die Anwendung umfasst einen Login-Bereich mit rollenbasierter Zugriffskontrolle, ein Dashboard mit Kennzahlen und Übersichten, eine Zutaten- und Rezeptverwaltung, Low-Stock- und Out-of-Stock-Warnungen, Lageranpassungen, Waste-Management sowie ein <span class="text-primary font-medium">POS-System</span> für Bestellungen und Zahlungen. Zusätzlich unterstützt das System mehrere Sprachen, darunter Deutsch, Englisch, Türkisch und BHS.',
+        'Technisch habe ich das Projekt mit <span class="text-primary font-medium">React, TypeScript, Vite und Tailwind CSS</span> im Frontend sowie mit <span class="text-primary font-medium">Java 17, Spring Boot, Spring Security, JWT, JPA/Hibernate und PostgreSQL</span> im Backend umgesetzt. Die Kommunikation zwischen Frontend und Backend erfolgt über eine REST-API. Für die lokale Entwicklung und das Deployment-Setup habe ich Docker verwendet.',
+        'Besonders wichtig war mir eine praxisnahe und benutzerfreundliche Umsetzung. Bestellungen im POS wirken sich direkt auf den Lagerbestand aus, kritische Bestände werden hervorgehoben, und durch die Mehrsprachigkeit ist die Anwendung auch in einem internationalen Team einsetzbar.',
       ],
       impacts: [
         {
-          title: "Eigenst├ñndige Full-Stack Entwicklung",
+          title: "Eigenständige Full-Stack Entwicklung",
           description:
-            "Das gesamte Projekt wurde von der Konzeption ├╝ber das Design bis zur technischen Umsetzung eigenst├ñndig entwickelt ÔÇö Frontend, Backend, Datenbank und Deployment.",
+            "Das gesamte Projekt wurde von der Konzeption über das Design bis zur technischen Umsetzung eigenständig entwickelt — Frontend, Backend, Datenbank und Deployment.",
         },
         {
-          title: "Praxisnahe Abl├ñufe",
+          title: "Praxisnahe Abläufe",
           description:
-            "Bestellungen im POS wirken sich direkt auf den Lagerbestand aus. Kritische Best├ñnde werden automatisch erkannt und hervorgehoben.",
+            "Bestellungen im POS wirken sich direkt auf den Lagerbestand aus. Kritische Bestände werden automatisch erkannt und hervorgehoben.",
         },
         {
-          title: "Mehrsprachigkeit f├╝r internationale Teams",
+          title: "Mehrsprachigkeit für internationale Teams",
           description:
-            "Unterst├╝tzung f├╝r Deutsch, Englisch, T├╝rkisch und BHS ÔÇö einsetzbar in einem internationalen Gastronomiebetrieb.",
+            "Unterstützung für Deutsch, Englisch, Türkisch und BHS — einsetzbar in einem internationalen Gastronomiebetrieb.",
         },
         {
           title: "REST-API Architektur",
           description:
-            "Saubere Trennung von Frontend und Backend ├╝ber eine RESTful API mit JWT-basierter Authentifizierung und rollenbasierter Zugriffskontrolle.",
+            "Saubere Trennung von Frontend und Backend über eine RESTful API mit JWT-basierter Authentifizierung und rollenbasierter Zugriffskontrolle.",
         },
       ],
       processVideos: [
@@ -69,21 +69,21 @@ export const projects: Project[] = [
           url: "https://res.cloudinary.com/din9yr5bk/video/upload/v1774813141/StockMeister_Dashboard_k9pjbn.mp4",
           title: "Login, Rollen und Dashboard",
           description:
-            "Dieses Video zeigt den Login-Prozess, den gesch├╝tzten Zugriff ├╝ber Rollen sowie das Dashboard mit Kennzahlen, Diagrammen und aktuellen ├£bersichten.",
+            "Dieses Video zeigt den Login-Prozess, den geschützten Zugriff über Rollen sowie das Dashboard mit Kennzahlen, Diagrammen und aktuellen Übersichten.",
           thumbnailUrl: cloudinaryThumb("https://res.cloudinary.com/din9yr5bk/video/upload/v1774813141/StockMeister_Dashboard_k9pjbn.mp4"),
         },
         {
           url: "https://res.cloudinary.com/din9yr5bk/video/upload/v1774813142/StockMeister_Kategorien_und_Niedriger_Bestand_xsbjbu.mp4",
           title: "Kategorien und Low-Stock",
           description:
-            "Hier wird die Verwaltung von Zutatenkategorien sowie die Erkennung von niedrigen und leeren Lagerbest├ñnden gezeigt. Kritische Best├ñnde k├Ânnen schnell aktualisiert werden.",
+            "Hier wird die Verwaltung von Zutatenkategorien sowie die Erkennung von niedrigen und leeren Lagerbeständen gezeigt. Kritische Bestände können schnell aktualisiert werden.",
           thumbnailUrl: cloudinaryThumb("https://res.cloudinary.com/din9yr5bk/video/upload/v1774813142/StockMeister_Kategorien_und_Niedriger_Bestand_xsbjbu.mp4"),
         },
         {
           url: "https://res.cloudinary.com/din9yr5bk/video/upload/v1774813144/StockMeister_Pos_und_alle_zakh4s.mp4",
           title: "POS und Mehrsprachigkeit",
           description:
-            "In diesem Video wird das POS-System mit Produktkategorien, der Bestell- und Bezahlablauf sowie die Sprachumschaltung zwischen Deutsch, Englisch, T├╝rkisch und BHS gezeigt.",
+            "In diesem Video wird das POS-System mit Produktkategorien, der Bestell- und Bezahlablauf sowie die Sprachumschaltung zwischen Deutsch, Englisch, Türkisch und BHS gezeigt.",
           thumbnailUrl: cloudinaryThumb("https://res.cloudinary.com/din9yr5bk/video/upload/v1774813144/StockMeister_Pos_und_alle_zakh4s.mp4"),
         },
       ],
@@ -124,13 +124,13 @@ export const projects: Project[] = [
         {
           title: "Low-Stock-Warnungen",
           description:
-            "Automatische Erkennung und Hervorhebung von niedrigen und leeren Lagerbest├ñnden mit schneller Aktualisierungsm├Âglichkeit.",
+            "Automatische Erkennung und Hervorhebung von niedrigen und leeren Lagerbeständen mit schneller Aktualisierungsmöglichkeit.",
           icon: "warning",
         },
         {
           title: "Mehrsprachigkeit",
           description:
-            "Unterst├╝tzung f├╝r DE, EN, TR und BHS ÔÇö einsetzbar in internationalen Teams.",
+            "Unterstützung für DE, EN, TR und BHS — einsetzbar in internationalen Teams.",
           tags: ["i18n", "DE", "EN", "TR", "BHS"],
         },
         {
@@ -143,13 +143,13 @@ export const projects: Project[] = [
         {
           title: "Waste-Management",
           description:
-            "Erfassung und Verwaltung von Lebensmittelabf├ñllen zur Kostenoptimierung im Restaurantbetrieb.",
+            "Erfassung und Verwaltung von Lebensmittelabfällen zur Kostenoptimierung im Restaurantbetrieb.",
           icon: "delete",
         },
         {
           title: "Dashboard",
           description:
-            "Zentrale ├£bersicht mit Kennzahlen, Diagrammen und aktuellen Bestandsinformationen auf einen Blick.",
+            "Zentrale Übersicht mit Kennzahlen, Diagrammen und aktuellen Bestandsinformationen auf einen Blick.",
           icon: "dashboard",
         },
       ],
@@ -159,9 +159,9 @@ export const projects: Project[] = [
     slug: "sportanlage-plattform",
     title: "Sportanlage Plattform",
     tagline:
-      "Multilinguale Buchungs- und Verwaltungsplattform f├╝r Sportanlagen mit Kundenfrontend, Admin-Dashboard und Stripe-Integration.",
+      "Multilinguale Buchungs- und Verwaltungsplattform für Sportanlagen mit Kundenfrontend, Admin-Dashboard und Stripe-Integration.",
     description:
-      "Dieses Projekt ist meine zweite gr├Â├ƒere Webanwendung und umfasst eine mehrsprachige Buchungs- und Verwaltungsplattform f├╝r eine Sportanlage. Enthalten sind ein Kundenfrontend, ein Admin-Dashboard, Buchungs- und Zahlungsabl├ñufe, Gutschein- und Happy-Hour-Funktionen sowie eine Oberfl├ñche in f├╝nf Sprachen.",
+      "Dieses Projekt ist meine zweite größere Webanwendung und umfasst eine mehrsprachige Buchungs- und Verwaltungsplattform für eine Sportanlage. Enthalten sind ein Kundenfrontend, ein Admin-Dashboard, Buchungs- und Zahlungsabläufe, Gutschein- und Happy-Hour-Funktionen sowie eine Oberfläche in fünf Sprachen.",
     techStack: [
       "react",
       "typescript",
@@ -182,17 +182,17 @@ export const projects: Project[] = [
     featured: true,
     order: 2,
     detail: {
-      role: "Full-Stack Entwicklung ÔÇö Eigenprojekt",
+      role: "Full-Stack Entwicklung — Eigenprojekt",
       heroImage: "/projects/sportanlage-plattform/cover.png",
       heroVideoUrl:
         "https://res.cloudinary.com/din9yr5bk/video/upload/v1774453700/Homepage_jypzmw.mp4",
-      heroVideoLabel: "Startseite & Benutzeroberfl├ñche",
+      heroVideoLabel: "Startseite & Benutzeroberfläche",
       challenge: [
-        'Dieses Projekt ist eine mehrsprachige Full-Stack-Webanwendung f├╝r die digitale Verwaltung einer Sportanlage und stellt meine zweite gr├Â├ƒere Webplattform dar. Die Anwendung verbindet ein ├Âffentliches Kundenfrontend mit einem umfangreichen Admin-Bereich und deckt dabei nicht nur klassische Reservierungsprozesse, sondern auch operative, organisatorische und sicherheitsrelevante Anforderungen ab.',
-        'Im ├Âffentlichen Bereich stehen eine moderne Buchungsstrecke, mehrsprachige Benutzerf├╝hrung, Online-Zahlungen, Gutscheinlogik, zeitabh├ñngige <span class="text-primary font-medium">Happy-Hour-Rabatte</span> sowie Funktionen zur eigenst├ñndigen Verwaltung bestehender Buchungen im Mittelpunkt. Die Oberfl├ñche unterst├╝tzt f├╝nf Sprachen: Deutsch, Englisch, T├╝rkisch, Albanisch und BHS.',
-        'Der Admin-Bereich ist als eigenst├ñndige Verwaltungsoberfl├ñche konzipiert und geht deutlich ├╝ber ein einfaches CRUD-Panel hinaus. Enthalten sind ein Dashboard mit Kennzahlen und Auswertungen, Reservierungs- und Zahlungsverwaltung, Gutschein- und Rabattsteuerung, Konfiguration von Preisen und Zeitslots, Verwaltung von Material und Gr├Â├ƒenbest├ñnden, Personal- und Kontaktverwaltung, Benachrichtigungsfunktionen sowie Systemeinstellungen.',
-        'Ein besonderer Schwerpunkt liegt auf <span class="text-primary font-medium">Sicherheit und Zuverl├ñssigkeit</span>. Integriert wurden JWT-basierte Authentifizierung, Refresh-Token-Rotation, aktive Sitzungsverwaltung sowie eine Zwei-Faktor-Authentifizierung per TOTP. Sensible Tokens werden gehasht verarbeitet; Rate-Limiting, Sicherheitsheader, CORS-Konfiguration und sichere Cookie-Strategien wurden ebenfalls ber├╝cksichtigt.',
-        'Technisch basiert das Projekt auf <span class="text-primary font-medium">React 19, TypeScript, Vite und Tailwind CSS</span> im Frontend sowie auf <span class="text-primary font-medium">Java 17, Spring Boot 3.2, Spring Security, JWT, PostgreSQL und Flyway</span> im Backend. Erg├ñnzt durch Stripe, strukturierte Logs, Monitoring-Schnittstellen und automatisierte Tests.',
+        'Dieses Projekt ist eine mehrsprachige Full-Stack-Webanwendung für die digitale Verwaltung einer Sportanlage und stellt meine zweite größere Webplattform dar. Die Anwendung verbindet ein öffentliches Kundenfrontend mit einem umfangreichen Admin-Bereich und deckt dabei nicht nur klassische Reservierungsprozesse, sondern auch operative, organisatorische und sicherheitsrelevante Anforderungen ab.',
+        'Im öffentlichen Bereich stehen eine moderne Buchungsstrecke, mehrsprachige Benutzerführung, Online-Zahlungen, Gutscheinlogik, zeitabhängige <span class="text-primary font-medium">Happy-Hour-Rabatte</span> sowie Funktionen zur eigenständigen Verwaltung bestehender Buchungen im Mittelpunkt. Die Oberfläche unterstützt fünf Sprachen: Deutsch, Englisch, Türkisch, Albanisch und BHS.',
+        'Der Admin-Bereich ist als eigenständige Verwaltungsoberfläche konzipiert und geht deutlich über ein einfaches CRUD-Panel hinaus. Enthalten sind ein Dashboard mit Kennzahlen und Auswertungen, Reservierungs- und Zahlungsverwaltung, Gutschein- und Rabattsteuerung, Konfiguration von Preisen und Zeitslots, Verwaltung von Material und Größenbeständen, Personal- und Kontaktverwaltung, Benachrichtigungsfunktionen sowie Systemeinstellungen.',
+        'Ein besonderer Schwerpunkt liegt auf <span class="text-primary font-medium">Sicherheit und Zuverlässigkeit</span>. Integriert wurden JWT-basierte Authentifizierung, Refresh-Token-Rotation, aktive Sitzungsverwaltung sowie eine Zwei-Faktor-Authentifizierung per TOTP. Sensible Tokens werden gehasht verarbeitet; Rate-Limiting, Sicherheitsheader, CORS-Konfiguration und sichere Cookie-Strategien wurden ebenfalls berücksichtigt.',
+        'Technisch basiert das Projekt auf <span class="text-primary font-medium">React 19, TypeScript, Vite und Tailwind CSS</span> im Frontend sowie auf <span class="text-primary font-medium">Java 17, Spring Boot 3.2, Spring Security, JWT, PostgreSQL und Flyway</span> im Backend. Ergänzt durch Stripe, strukturierte Logs, Monitoring-Schnittstellen und automatisierte Tests.',
       ],
       impacts: [
         {
@@ -203,7 +203,7 @@ export const projects: Project[] = [
         {
           title: "5-sprachige Internationalisierung",
           description:
-            "Vollst├ñndige Benutzerf├╝hrung in Deutsch, Englisch, T├╝rkisch, Albanisch und BHS ÔÇö einsetzbar in einem multikulturellen Umfeld.",
+            "Vollständige Benutzerführung in Deutsch, Englisch, Türkisch, Albanisch und BHS — einsetzbar in einem multikulturellen Umfeld.",
         },
         {
           title: "Professionelle Sicherheitsarchitektur",
@@ -213,7 +213,7 @@ export const projects: Project[] = [
         {
           title: "Stripe-Integration & Zahlungslogik",
           description:
-            "Online-Zahlungen, Vor-Ort-Zahlung, Refund-Logik, Gutschein-System mit G├╝ltigkeit und Limits sowie zeitabh├ñngige Happy-Hour-Rabatte.",
+            "Online-Zahlungen, Vor-Ort-Zahlung, Refund-Logik, Gutschein-System mit Gültigkeit und Limits sowie zeitabhängige Happy-Hour-Rabatte.",
         },
       ],
       processVideos: [
@@ -221,70 +221,70 @@ export const projects: Project[] = [
           url: "https://res.cloudinary.com/din9yr5bk/video/upload/v1774453700/Homepage_jypzmw.mp4",
           title: "Startseite",
           description:
-            "Dieses Video zeigt die ├Âffentliche Startseite der Website und vermittelt einen Eindruck von Aufbau, Navigation und Benutzeroberfl├ñche.",
+            "Dieses Video zeigt die öffentliche Startseite der Website und vermittelt einen Eindruck von Aufbau, Navigation und Benutzeroberfläche.",
           thumbnailUrl: cloudinaryThumb("https://res.cloudinary.com/din9yr5bk/video/upload/v1774453700/Homepage_jypzmw.mp4"),
         },
         {
           url: "https://res.cloudinary.com/din9yr5bk/video/upload/v1774453700/Turniere_x36ykt.mp4",
           title: "Turnierbereich",
           description:
-            "Dieses Video zeigt den Turnierbereich der Website mit Turnier├╝bersicht und Anmeldeseite aus Benutzersicht.",
+            "Dieses Video zeigt den Turnierbereich der Website mit Turnierübersicht und Anmeldeseite aus Benutzersicht.",
           thumbnailUrl: cloudinaryThumb("https://res.cloudinary.com/din9yr5bk/video/upload/v1774453700/Turniere_x36ykt.mp4"),
         },
         {
           url: "https://res.cloudinary.com/din9yr5bk/video/upload/v1774453693/Buchungsystemslot_xgnahp.mp4",
           title: "Buchungsablauf",
           description:
-            "Hier wird gezeigt, wie eine Buchung im Frontend durchgef├╝hrt wird ÔÇö vom Auswahlprozess bis zur Reservierung.",
+            "Hier wird gezeigt, wie eine Buchung im Frontend durchgeführt wird — vom Auswahlprozess bis zur Reservierung.",
           thumbnailUrl: cloudinaryThumb("https://res.cloudinary.com/din9yr5bk/video/upload/v1774453693/Buchungsystemslot_xgnahp.mp4"),
         },
         {
           url: "https://res.cloudinary.com/din9yr5bk/video/upload/v1774453697/Buchungsystem_Buchungverwalten_qxqxy7.mp4",
           title: "Buchungsverwaltung",
           description:
-            "Das Buchungssystem aus Sicht der Verwaltung, einschlie├ƒlich ├£bersicht, Bearbeitung und Verwaltung bestehender Reservierungen.",
+            "Das Buchungssystem aus Sicht der Verwaltung, einschließlich Übersicht, Bearbeitung und Verwaltung bestehender Reservierungen.",
           thumbnailUrl: cloudinaryThumb("https://res.cloudinary.com/din9yr5bk/video/upload/v1774453697/Buchungsystem_Buchungverwalten_qxqxy7.mp4"),
         },
         {
           url: "https://res.cloudinary.com/din9yr5bk/video/upload/v1774453702/Mehrsprachingkeit_dgguyd.mp4",
           title: "Mehrsprachigkeit",
           description:
-            "Die Sprachumschaltung der Website in Deutsch, Englisch, T├╝rkisch, Albanisch und BHS (Bosnisch/Kroatisch/Serbisch).",
+            "Die Sprachumschaltung der Website in Deutsch, Englisch, Türkisch, Albanisch und BHS (Bosnisch/Kroatisch/Serbisch).",
           thumbnailUrl: cloudinaryThumb("https://res.cloudinary.com/din9yr5bk/video/upload/v1774453702/Mehrsprachingkeit_dgguyd.mp4"),
         },
         {
           url: "https://res.cloudinary.com/din9yr5bk/video/upload/v1774453686/Admindashboard_g5qqjd.mp4",
           title: "Admin-Dashboard",
           description:
-            "Admin-Login sowie Dashboard mit Tabellen, Kennzahlen, Buchungsdaten und weiteren ├£bersichten im Verwaltungsbereich.",
+            "Admin-Login sowie Dashboard mit Tabellen, Kennzahlen, Buchungsdaten und weiteren Übersichten im Verwaltungsbereich.",
           thumbnailUrl: cloudinaryThumb("https://res.cloudinary.com/din9yr5bk/video/upload/v1774453686/Admindashboard_g5qqjd.mp4"),
         },
         {
           url: "https://res.cloudinary.com/din9yr5bk/video/upload/v1774453697/Adminpage_jxayiz.mp4",
           title: "Admin-Kategorien",
           description:
-            "├£berblick ├╝ber die verschiedenen Kategorien, Tabs und Verwaltungsbereiche innerhalb des Admin-Panels.",
+            "Überblick über die verschiedenen Kategorien, Tabs und Verwaltungsbereiche innerhalb des Admin-Panels.",
           thumbnailUrl: cloudinaryThumb("https://res.cloudinary.com/din9yr5bk/video/upload/v1774453697/Adminpage_jxayiz.mp4"),
         },
         {
           url: "https://res.cloudinary.com/din9yr5bk/video/upload/v1774453691/Admin_Einstellungen_coo1b5.mp4",
           title: "Systemkonfiguration",
           description:
-            "Einstellungsseite im Admin-Bereich mit Konfigurationen wie Preisen, ├ûffnungszeiten, Benachrichtigungen, Happy-Hour-Einstellungen und weiteren Systemoptionen.",
+            "Einstellungsseite im Admin-Bereich mit Konfigurationen wie Preisen, Öffnungszeiten, Benachrichtigungen, Happy-Hour-Einstellungen und weiteren Systemoptionen.",
           thumbnailUrl: cloudinaryThumb("https://res.cloudinary.com/din9yr5bk/video/upload/v1774453691/Admin_Einstellungen_coo1b5.mp4"),
         },
         {
           url: "https://res.cloudinary.com/din9yr5bk/video/upload/v1774453696/Happyhour_vejlnm.mp4",
           title: "Happy-Hour",
           description:
-            "Happy-Hour-Funktion mit zeitabh├ñngigen Rabatten und ihrer Darstellung innerhalb der Anwendung.",
+            "Happy-Hour-Funktion mit zeitabhängigen Rabatten und ihrer Darstellung innerhalb der Anwendung.",
           thumbnailUrl: cloudinaryThumb("https://res.cloudinary.com/din9yr5bk/video/upload/v1774453696/Happyhour_vejlnm.mp4"),
         },
         {
           url: "https://res.cloudinary.com/din9yr5bk/video/upload/v1774453701/Gutschein_hswwgw.mp4",
           title: "Gutschein-System",
           description:
-            "Gutscheinlogik der Anwendung ÔÇö von der Verwaltung im Admin-Bereich bis zur Sichtbarkeit und Nutzung im Frontend.",
+            "Gutscheinlogik der Anwendung — von der Verwaltung im Admin-Bereich bis zur Sichtbarkeit und Nutzung im Frontend.",
           thumbnailUrl: cloudinaryThumb("https://res.cloudinary.com/din9yr5bk/video/upload/v1774453701/Gutschein_hswwgw.mp4"),
         },
       ],
@@ -330,20 +330,20 @@ export const projects: Project[] = [
         {
           title: "Buchungssystem mit Slot-Hold",
           description:
-            "Verf├╝gbarkeitslogik, Slot-Hold-Mechanismus und dynamische Preisberechnung. Buchungen, Umbuchungen und Stornierungen aus einer Oberfl├ñche.",
+            "Verfügbarkeitslogik, Slot-Hold-Mechanismus und dynamische Preisberechnung. Buchungen, Umbuchungen und Stornierungen aus einer Oberfläche.",
           icon: "calendar_month",
           wide: true,
         },
         {
           title: "Stripe-Zahlungen & Refunds",
           description:
-            "Online-Zahlungen via Stripe, Vor-Ort-Zahlung sowie vollst├ñndige Refund-Logik f├╝r stornierte Buchungen.",
+            "Online-Zahlungen via Stripe, Vor-Ort-Zahlung sowie vollständige Refund-Logik für stornierte Buchungen.",
           icon: "payments",
         },
         {
           title: "5 Sprachen",
           description:
-            "Vollst├ñndige Internationalisierung in Deutsch, Englisch, T├╝rkisch, Albanisch und BHS.",
+            "Vollständige Internationalisierung in Deutsch, Englisch, Türkisch, Albanisch und BHS.",
           tags: ["i18n", "DE", "EN", "TR", "AL", "BHS"],
         },
         {
@@ -356,7 +356,7 @@ export const projects: Project[] = [
         {
           title: "Gutschein- & Happy-Hour-System",
           description:
-            "Gutscheine mit G├╝ltigkeit, Limits und Rabattlogik. Zeitabh├ñngige Happy-Hour-Preisvorteile mit konfigurierbaren Zeitfenstern.",
+            "Gutscheine mit Gültigkeit, Limits und Rabattlogik. Zeitabhängige Happy-Hour-Preisvorteile mit konfigurierbaren Zeitfenstern.",
           icon: "loyalty",
         },
         {
@@ -372,9 +372,9 @@ export const projects: Project[] = [
     slug: "ecommerce-plattform",
     title: "E-Commerce Plattform",
     tagline:
-      "Moderne E-Commerce-Plattform f├╝r kuratierte Souvenirs und Wohnaccessoires mit hochwertigem Storefront, Kundenbereich, Wunschliste, Checkout, Zahlungsintegration und Admin-Workflow. Bald verf├╝gbar.",
+      "Moderne E-Commerce-Plattform für kuratierte Souvenirs und Wohnaccessoires mit hochwertigem Storefront, Kundenbereich, Wunschliste, Checkout, Zahlungsintegration und Admin-Workflow. Bald verfügbar.",
     description:
-      "Eine moderne Full-Stack E-Commerce-Plattform f├╝r handverlesene Souvenirs und Wohnaccessoires mit hochwertigem UI, responsivem Frontend, intelligenter Produktsuche, Wunschliste, Kundenkonto, mehrstufigem Checkout, Zahlungsanbindung, Retourenlogik und Admin-Workflows. Technisch umgesetzt mit React, TypeScript, Tailwind CSS, Java Spring Boot, PostgreSQL, Redis, Stripe, OAuth und automatisierten E-Mail-Prozessen. Bald verf├╝gbar.",
+      "Eine moderne Full-Stack E-Commerce-Plattform für handverlesene Souvenirs und Wohnaccessoires mit hochwertigem UI, responsivem Frontend, intelligenter Produktsuche, Wunschliste, Kundenkonto, mehrstufigem Checkout, Zahlungsanbindung, Retourenlogik und Admin-Workflows. Technisch umgesetzt mit React, TypeScript, Tailwind CSS, Java Spring Boot, PostgreSQL, Redis, Stripe, OAuth und automatisierten E-Mail-Prozessen. Bald verfügbar.",
     techStack: [
       "react",
       "typescript",
