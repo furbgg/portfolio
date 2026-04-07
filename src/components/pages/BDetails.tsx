@@ -328,7 +328,7 @@ export default function BDetails() {
     <section id="slide-2" className="slide bg-b-brand-soft">
         <div className="max-w-6xl mx-auto w-full">
             <div className="text-center mb-16 fade-in">
-                <h2 className="font-serif text-3xl md:text-5xl text-b-brand-slate mb-4">DM Üzerinden Satışın <br />Kayıp Maliyeti</h2>
+                <h2 className="font-serif text-3xl md:text-5xl text-b-brand-slate mb-4">Die versteckten Kosten <br />des DM-Verkaufs</h2>
                 <p className="text-slate-500 text-lg font-light max-w-2xl mx-auto">Sie haben treue Follower, aber die Bestellverwaltung ist im Chaos geendet.</p>
             </div>
 
@@ -407,7 +407,7 @@ export default function BDetails() {
         <div className="max-w-6xl mx-auto w-full fade-in">
             <div className="text-center mb-16">
                 <span className="text-b-brand-gold font-bold tracking-[0.2em] uppercase text-xs mb-4 block">Keine Programmierkenntnisse erforderlich</span>
-                <h2 className="font-serif text-4xl md:text-5xl text-b-brand-slate mb-6">Instagram Kullanmak Kadar Kolay<br />Bir Yönetim Paneli</h2>
+                <h2 className="font-serif text-4xl md:text-5xl text-b-brand-slate mb-6">Ein Dashboard, so einfach<br />wie die Nutzung von Instagram</h2>
             </div>
 
             <div className="bg-white rounded-[3rem] p-8 md:p-12 shadow-xl border border-b-brand-blush relative overflow-hidden">
@@ -504,7 +504,7 @@ export default function BDetails() {
     <section id="slide-6" className="slide bg-b-brand-blush border-t border-b-brand-rose">
         <div className="max-w-4xl mx-auto w-full fade-in text-center">
             <span className="material-symbols-outlined text-b-brand-gold text-5xl mb-6 bounce">diamond</span>
-            <h2 className="font-serif text-4xl md:text-6xl text-b-brand-slate mb-6 leading-tight">Markanızı Birlikte<br />Geleceğe Taşıyalım.</h2>
+            <h2 className="font-serif text-4xl md:text-6xl text-b-brand-slate mb-6 leading-tight">Lassen Sie uns Ihre Marke gemeinsam<br />in die Zukunft führen.</h2>
             <p className="text-slate-600 text-lg mb-12 font-light">Der Übergang von einer Instagram-Boutique zu einer eleganten E-Commerce-Marke, die von Europäern respektiert wird, ist viel einfacher und günstiger als Sie denken.</p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

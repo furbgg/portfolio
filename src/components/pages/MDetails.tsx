@@ -398,7 +398,7 @@ export default function MDetails() {
                 Exklusiv für den Premium-Möbelbereich
             </span>
             <h1 className="font-serif text-5xl md:text-7xl mb-6 leading-tight font-bold">
-                Kiralık Değil,<br /><span className="gold-gradient-text">Size Ait</span> E-Ticaret.
+                Kein Mietmodell,<br /><span className="gold-gradient-text">Sondern Ihr Eigenes</span> E-Commerce.
             </h1>
             <p className="text-xl md:text-2xl text-slate-300 font-light mb-12 max-w-3xl leading-relaxed mx-auto lg:mx-0">
                 Steigen Sie um auf einen rechtlich einwandfreien, SEO-freundlichen und eigenen lizenzierten Shop ohne 'versteckte monatliche Kosten' für den österreichischen Markt.
@@ -476,7 +476,7 @@ export default function MDetails() {
                                 <div className="absolute inset-0 bg-slate-900/90 flex flex-col items-center justify-center fade-in" style={{animationDelay: '2s', animationDuration: '3s', animationFillMode: 'both', animationIterationCount: 'infinite'}}>
                                     <span className="material-symbols-outlined text-4xl text-red-500 mb-2">error</span>
                                     <p className="text-red-400 font-bold text-center px-4">FEHLER: Variantenlimit überschritten (96/100)!</p>
-                                    <p className="text-[10px] text-slate-400 mt-2 text-center">4. Opsiyon (Kırlent Rengi) Eklenemez.<br />Aylık 39$ 'Varyant Eklentisi' Satın Alın.</p>
+                                    <p className="text-[10px] text-slate-400 mt-2 text-center">4. Option (Kissenfarbe) kann nicht hinzugefügt werden.<br />Kaufen Sie das 'Varianten-Plugin' für 39$/Monat.</p>
                                 </div>
                             </div>
                         </div>
@@ -602,7 +602,7 @@ export default function MDetails() {
             </div>
 
             <div className="order-1 lg:order-2">
-                <h2 className="font-serif text-4xl md:text-5xl text-white mb-6">Tam Bağımsız<br />Yönetim Gücü</h2>
+                <h2 className="font-serif text-4xl md:text-5xl text-white mb-6">Vollständig unabhängige<br />Verwaltungsstärke</h2>
                 <p className="text-slate-300 text-lg mb-8">Verwalten Sie Ihr gesamtes Startseiten-Schaufenster und Ihre Bestellungen, ohne externen Support zu benötigen.</p>
 
                 <ul className="space-y-6">
