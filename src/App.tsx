@@ -14,16 +14,35 @@ function ScrollToTop() {
   return null;
 }
 
+import BDetails from "@/components/pages/BDetails";
+import MDetails from "@/components/pages/MDetails";
+
 export default function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <Header />
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/project/:slug" element={<ProjectDetail />} />
+        {/* Full-page standalone pitch presentations without generic Header/Footer */}
+        <Route path="/b-details" element={<BDetails />} />
+        <Route path="/m-details" element={<MDetails />} />
+        
+        {/* Normal layout with Header and Footer */}
+        <Route
+          path="*"
+          element={
+            <div className="flex flex-col min-h-screen">
+              <Header />
+              <main className="flex-grow">
+                <Routes>
+                  <Route path="/" element={<HomePage />} />
+                  <Route path="/project/:slug" element={<ProjectDetail />} />
+                </Routes>
+              </main>
+              <Footer />
+            </div>
+          }
+        />
       </Routes>
-      <Footer />
     </BrowserRouter>
   );
 }

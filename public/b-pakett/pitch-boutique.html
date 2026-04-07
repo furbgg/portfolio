@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Butiğinden Global Markaya</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { 
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    },
+                    colors: { 
+                        brand: {
+                            rose: '#e8d5d1',
+                            blush: '#f5ebe9',
+                            slate: '#2d3748',
+                            gold: '#d4af37',
+                            soft: '#faf9f8'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body, html { height: 100%; margin: 0; scroll-snap-type: y mandatory; overflow-x: hidden; background-color: #faf9f8; color: #2d3748; }
+        .slide { min-height: 100vh; width: 100vw; scroll-snap-align: start; padding: 4rem 2rem; position: relative; display: flex; flex-direction: column; justify-content: center; }
+        @media (min-width: 1024px) { .slide { padding: 4rem 6rem; } }
+        
+        .fade-in { animation: fadeIn 1s ease-out forwards; opacity: 0; }
+        .delay-1 { animation-delay: 0.3s; }
+        .delay-2 { animation-delay: 0.6s; }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .glass-card { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(10px); border: 1px solid rgba(232, 213, 209, 0.5); }
+        
+        /* Navigation Dots */
+        .nav-dots { display: flex; flex-direction: column; gap: 12px; position: fixed; right: 2rem; top: 50%; transform: translateY(-50%); z-index: 50; }
+        .nav-dot { width: 4px; height: 32px; background: rgba(45,55,72,0.1); border-radius: 4px; transition: all 0.3s; }
+        .nav-dot:hover { background: #e8d5d1; }
+
+        .bounce { animation: bounce 2s infinite; }
+        @keyframes bounce { 0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 40% {transform: translateY(-10px);} 60% {transform: translateY(-5px);} }
+    </style>
+</head>
+<body class="selection:bg-brand-rose selection:text-brand-slate">
+
+    <div class="nav-dots hidden md:flex">
+        <a href="#slide-1" class="nav-dot" title="Giriş"></a>
+        <a href="#slide-2" class="nav-dot" title="DM Satışının Limitleri"></a>
+        <a href="#slide-3" class="nav-dot" title="Global E-Ticaret"></a>
+        <a href="#slide-4" class="nav-dot" title="Butik Özellikleri"></a>
+        <a href="#slide-5" class="nav-dot" title="Sıfır Risk, Minimum Maliyet"></a>
+        <a href="#slide-6" class="nav-dot" title="Hemen Başlayın"></a>
+    </div>
+
+    <!-- SLIDE 1: HOOK (Instagram to Global) -->
+    <section id="slide-1" class="slide bg-cover bg-center" style="background-image: linear-gradient(to right, rgba(250, 249, 248, 0.95) 40%, rgba(250, 249, 248, 0.4)), url('https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&q=80');">
+        <div class="max-w-6xl w-full fade-in relative z-10 mx-auto px-4 lg:px-0">
+            <span class="inline-block py-1 px-4 rounded-full bg-brand-blush text-brand-slate font-medium text-xs tracking-[0.3em] uppercase mb-8 border border-brand-rose">
+                Avusturya Moda ve Butik Sektörüne Özel
+            </span>
+            <h1 class="font-serif text-5xl md:text-7xl mb-6 leading-tight text-brand-slate">
+                Instagram Butiğinden<br><span class="text-brand-gold italic">Global Markaya.</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-600 font-light mb-12 max-w-2xl leading-relaxed">
+                Yüzlerce mesaja tek tek cevap vermekten yorulmadınız mı? Takipçilerinizi, Avrupa'nın her yerine satış yapan profesyonel, şık ve size ait bir e-ticaret mağazasıyla karşılayın.
+            </p>
+            
+            <a href="#slide-2" class="inline-flex items-center gap-2 bg-brand-slate hover:bg-black text-white font-medium py-4 px-10 rounded-full transition-all tracking-wide">
+                Dönüşümü Keşfedin <span class="material-symbols-outlined text-sm">arrow_downward</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- SLIDE 2: THE INSTAGRAM/DM PROBLEM -->
+    <section id="slide-2" class="slide bg-brand-soft">
+        <div class="max-w-6xl mx-auto w-full">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="font-serif text-3xl md:text-5xl text-brand-slate mb-4">DM Üzerinden Satışın <br>Kayıp Maliyeti</h2>
+                <p class="text-slate-500 text-lg font-light max-w-2xl mx-auto">Sadık takipçileriniz var ama siparişleri yönetmek bir kaosa dönüştü.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-card p-10 rounded-[2rem] shadow-sm fade-in delay-1 hover:-translate-y-2 transition-transform text-center">
+                    <span class="material-symbols-outlined text-rose-400 text-4xl mb-6">forum</span>
+                    <h3 class="text-lg font-bold mb-4 text-brand-slate uppercase tracking-wide text-sm">"Beden Kaldı Mı?"</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Müşterilerinize manuel olarak stok, fiyat ve kargo süresi cevaplamaktan asıl işinize (ürün bulmaya) odaklanamıyorsunuz. Gece 03:00'te gelen siparişi kaçırıyorsunuz.</p>
+                </div>
+                
+                <div class="glass-card p-10 rounded-[2rem] shadow-sm fade-in delay-1 hover:-translate-y-2 transition-transform text-center">
+                    <span class="material-symbols-outlined text-slate-400 text-4xl mb-6">public_off</span>
+                    <h3 class="text-lg font-bold mb-4 text-brand-slate uppercase tracking-wide text-sm">Güven ve Prestij Eksikliği</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Avusturya veya Almanya'dan sizi yeni keşfeden bir müşteri, profesyonel bir web adresiniz (Domain) yoksa ve sadece "IBAN'a havale" istiyorsanız alışverişten vazgeçer.</p>
+                </div>
+                
+                <div class="glass-card p-10 rounded-[2rem] shadow-sm fade-in delay-2 hover:-translate-y-2 transition-transform text-center relative overflow-hidden">
+                    <div class="absolute inset-0 bg-brand-rose opacity-10"></div>
+                    <span class="material-symbols-outlined text-brand-gold text-4xl mb-6 relative z-10">language</span>
+                    <h3 class="text-lg font-bold mb-4 text-brand-slate uppercase tracking-wide text-sm relative z-10">Global Yurtdışı Sınırı</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed relative z-10">Takipçilerinizin birçoğu yurtdışında. Ancak DM üzerinden kargo parası anlatmak, çeviri yapmak veya Euro ödemesi almak çok zahmetli. Potansiyel cironuzun %60'ını geri çeviriyorsunuz.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 3: WHAT WE OFFER (Elegance & Automation) -->
+    <section id="slide-3" class="slide bg-brand-slate text-brand-soft">
+        <div class="max-w-6xl mx-auto w-full fade-in flex flex-col lg:flex-row gap-16 items-center">
+            <div class="lg:w-1/2 relative">
+                <div class="absolute inset-0 bg-gradient-to-tr from-brand-rose to-brand-gold opacity-10 blur-2xl rounded-full"></div>
+                <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&q=80" alt="Chic Fashion Concept" class="rounded-t-[10rem] rounded-b-[2rem] object-cover w-full h-[600px] border border-slate-700 relative z-10 shadow-2xl">
+                <!-- Floating Element -->
+                <div class="absolute -right-8 bottom-12 bg-white text-slate-800 p-4 rounded-xl shadow-xl z-20 flex items-center gap-4 fade-in delay-2">
+                    <span class="material-symbols-outlined text-brand-gold">shopping_bag</span>
+                    <div>
+                        <div class="text-xs text-slate-500">Avusturya -> Almanya</div>
+                        <div class="font-bold text-sm">2 Sipariş Uyurken Alındı</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="lg:w-1/2">
+                <span class="text-brand-rose font-medium tracking-[0.2em] uppercase text-xs mb-4 block">7/24 Otomatik Akış</span>
+                <h2 class="font-serif text-4xl md:text-5xl mb-8">Uyumadığınız Bir Mağaza Deneyimi</h2>
+                
+                <div class="space-y-8">
+                    <div class="flex items-start gap-5">
+                        <div class="mt-1"><span class="material-symbols-outlined text-brand-gold text-3xl">auto_awesome</span></div>
+                        <div>
+                            <h4 class="font-bold text-lg text-brand-rose mb-1">Müşteriniz Kendisi Alışveriş Yapsın</h4>
+                            <p class="text-sm text-slate-400">Ürün bedenleri, renkleri ve stok durumu sistemdedir. Ziyaretçi beğendiği elbiseyi sepete atar, kargo bilgilerini girer ve siz hiç müdahale etmeden sipariş onayı telefonunuza düşer.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-5">
+                        <div class="mt-1"><span class="material-symbols-outlined text-brand-gold text-3xl">local_mall</span></div>
+                        <div>
+                            <h4 class="font-bold text-lg text-brand-rose mb-1">Sepet Rezervasyonu (Fast-Fashion)</h4>
+                            <p class="text-sm text-slate-400">Butiklerde son kalan 1 adet elbiseyi aynı anda 3 kişinin sepete atması büyük sıkıntıdır. Sistemimiz sepete eklenen "Son Beden" elbiseyi 15 dakika boyunca sadece o kişiye rezerve eder.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-5">
+                        <div class="mt-1"><span class="material-symbols-outlined text-brand-gold text-3xl">translate</span></div>
+                        <div>
+                            <h4 class="font-bold text-lg text-brand-rose mb-1">3 Dil, Dünyanın Her Yerine Kargo</h4>
+                            <p class="text-sm text-slate-400">Almanca, İngilizce ve Türkçe olarak siteniz çalışır. Müşteri İsviçre'den de girse dili kendine göre görür, adresini kolayca şık tasarımla girer.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 4: ADMIN / EASE OF USE -->
+    <section id="slide-4" class="slide">
+        <div class="max-w-6xl mx-auto w-full fade-in">
+            <div class="text-center mb-16">
+                <span class="text-brand-gold font-bold tracking-[0.2em] uppercase text-xs mb-4 block">Kod Bilmenize Gerek Yok</span>
+                <h2 class="font-serif text-4xl md:text-5xl text-brand-slate mb-6">Instagram Kullanmak Kadar Kolay<br>Bir Yönetim Paneli</h2>
+            </div>
+
+            <div class="bg-white rounded-[3rem] p-8 md:p-12 shadow-xl border border-brand-blush relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-brand-blush rounded-full mix-blend-multiply filter blur-3xl opacity-70"></div>
+                
+                <div class="grid md:grid-cols-3 gap-12 relative z-10">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center border border-slate-100">
+                            <span class="material-symbols-outlined text-slate-600">add_box</span>
+                        </div>
+                        <h4 class="font-bold text-brand-slate">Telefondan Ürün Ekleme</h4>
+                        <p class="text-sm text-slate-500 leading-relaxed">Depoya yeni gelen ürünün fotoğrafını çekin, fiyatını ve bedenini seçip "Yayınla"ya basın. Saniyeler içinde vitrinde.</p>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center border border-slate-100">
+                            <span class="material-symbols-outlined text-slate-600">notifications_active</span>
+                        </div>
+                        <h4 class="font-bold text-brand-slate">Geciken Kargo Uyarısı</h4>
+                        <p class="text-sm text-slate-500 leading-relaxed">Pazartesi alınan siparişi Çarşamba oldu kargoya vermediniz mi? Telefonunuza "Kargo Gecikti!" acil kırmızı uyarısı düşer.</p>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center border border-slate-100">
+                            <span class="material-symbols-outlined text-slate-600">brush</span>
+                        </div>
+                        <h4 class="font-bold text-brand-slate">Anasayfanızı Siz Tasarlayın</h4>
+                        <p class="text-sm text-slate-500 leading-relaxed">"İlkbahar Koleksiyonu" banner görselinizi kodsuz sürükle-bırak ile değiştirin. Kampanyalarınızı ajanslara muhtaç olmadan yönetin.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 5: PRICING (The Clincher) -->
+    <section id="slide-5" class="slide bg-white relative">
+        <div class="absolute inset-0 bg-brand-rose bg-opacity-5"></div>
+        <div class="max-w-5xl mx-auto w-full fade-in relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-4xl md:text-5xl text-brand-slate mb-4">Uzun Vadeli ve Şeffaf Ortaklık</h2>
+                <p class="text-slate-500 text-lg font-light">Hazır platformların öngörülemeyen bütçelerine karşın, markanızın büyümesini destekleyen net fiyatlandırma modelimiz.</p>
+            </div>
+
+            <div class="bg-brand-slate text-white rounded-[3rem] p-8 md:p-12 shadow-2xl relative overflow-hidden border border-slate-700">
+                <!-- Gold ribbon -->
+                <div class="absolute -right-16 top-10 bg-brand-gold text-brand-slate font-bold text-[10px] tracking-widest py-1 px-16 transform rotate-45 uppercase">
+                    ŞEFFAF FİYATLAMA
+                </div>
+                
+                <h3 class="font-serif text-2xl mb-8 border-b border-slate-700 pb-4">Şık Mağaza Cüzi Yatırım</h3>
+                
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div>
+                        <h4 class="text-rose-300 font-medium mb-4 uppercase tracking-widest text-xs">Geleneksel Platformlar (Örn. Shopify)</h4>
+                        <ul class="space-y-3 opacity-60">
+                            <li class="flex items-center gap-2 text-sm"><span class="text-red-400">✕</span> Yıllık Abonelik: Min. 1200€ / Yıl Sürekli Gider</li>
+                            <li class="flex items-center gap-2 text-sm"><span class="text-red-400">✕</span> Yasal Eklentiler (GDPR/Abmahnung Koruması): Ekstra Aylık Maliyet</li>
+                            <li class="flex items-center gap-2 text-sm"><span class="text-red-400">✕</span> Çifte Komisyon: Hem ödeme altyapısı hem Shopify ekstra ciro keser</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-brand-gold font-medium mb-4 flex items-center gap-2 uppercase tracking-widest text-xs">
+                            <span class="material-symbols-outlined text-base">verified</span> Bizim Teklifimiz
+                        </h4>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-emerald-400">task_alt</span>
+                                <div>
+                                    <span class="block font-bold">1.000€ - 1.500€</span>
+                                    <span class="text-xs text-slate-400">Tek Seferlik Kurulum (Ebedi sizin)</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-emerald-400">task_alt</span>
+                                <div>
+                                    <span class="block font-bold">Aylık 75€'dan Başlayan Bakım</span>
+                                    <span class="text-xs text-slate-400">Tüm sunucu, güvenlik ve kesintisiz destek ücreti dahildir.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-emerald-400">task_alt</span>
+                                <div>
+                                    <span class="block font-bold">Çifte Komisyona Son</span>
+                                    <span class="text-xs text-slate-400">Shopify gibi "Platforma Özel" ekstra ciro haraçları ödemezsiniz. Sadece uluslararası güvenli aracı olan Stripe kendi küçük kesintisini yapar.</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 6: CALL TO ACTION -->
+    <section id="slide-6" class="slide bg-brand-blush border-t border-brand-rose">
+        <div class="max-w-4xl mx-auto w-full fade-in text-center">
+            <span class="material-symbols-outlined text-brand-gold text-5xl mb-6 bounce">diamond</span>
+            <h2 class="font-serif text-4xl md:text-6xl text-brand-slate mb-6 leading-tight">Markanızı Birlikte<br>Geleceğe Taşıyalım.</h2>
+            <p class="text-slate-600 text-lg mb-12 font-light">Instagram butiğinden, Avrupalıların saygı duyduğu şık bir e-ticaret markasına geçiş yapmak düşündüğünüzden çok daha kolay ve uygun maliyetli.</p>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="https://wa.me/430000000000" target="_blank" class="bg-green-600 hover:bg-green-500 text-white font-medium py-4 px-8 rounded-full transition-all tracking-wide shadow-xl hover:shadow-green-500/30 flex items-center gap-3">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    WhatsApp'tan İletişime Geç
+                </a>
+                <a href="mailto:iletisim@sirketiniz.com" class="border-2 border-brand-slate text-brand-slate hover:bg-brand-slate hover:text-white font-medium py-4 px-8 rounded-full transition-all tracking-wide shadow-lg flex items-center gap-3">
+                    <span class="material-symbols-outlined">mail</span>
+                    E-Posta Gönder
+                </a>
+            </div>
+            <p class="mt-8 text-xs text-slate-400">Kurulum 3-6 hafta içerisinde tamamlanır, Avusturya standartlarına %100 uyumludur.</p>
+        </div>
+    </section>
+
+    <script>
+        const dots = document.querySelectorAll('.nav-dot');
+        const sections = document.querySelectorAll('.slide');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const currentId = entry.target.getAttribute('id');
+                    dots.forEach(dot => {
+                        dot.style.background = dot.getAttribute('href') === '#' + currentId 
+                            ? '#e8d5d1' 
+                            : 'rgba(45,55,72,0.1)';
+                    });
+                }
+            });
+        }, { threshold: 0.5 });
+
+        sections.forEach(sec => observer.observe(sec));
+    </script>
+</body>
+</html>

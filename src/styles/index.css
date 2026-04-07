@@ -52,6 +52,21 @@
   --font-family-headline: "Manrope", sans-serif;
   --font-family-body: "Inter", sans-serif;
   --font-family-label: "Inter", sans-serif;
+
+  /* B-pakett colors */
+  --color-b-brand-rose: #e8d5d1;
+  --color-b-brand-blush: #f5ebe9;
+  --color-b-brand-slate: #2d3748;
+  --color-b-brand-gold: #d4af37;
+  --color-b-brand-soft: #faf9f8;
+
+  /* M-pakett colors */
+  --color-m-brand-50: #f8fafc;
+  --color-m-brand-100: #f1f5f9;
+  --color-m-brand-800: #1e293b;
+  --color-m-brand-900: #0f172a;
+  --color-m-brand-gold: #b4975a;
+  --color-m-brand-goldlight: #d4af37;
 }
 
 html {
@@ -117,4 +132,117 @@ body {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+/* Base custom classes for B and M details */
+.b-details-page, .m-details-page {
+  scroll-snap-type: y mandatory;
+  overflow-x: hidden;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.b-details-page {
+  background-color: var(--color-b-brand-soft);
+  color: var(--color-b-brand-slate);
+}
+
+.m-details-page {
+  background-color: var(--color-m-brand-900);
+  color: var(--color-m-brand-50);
+}
+
+.b-details-page .slide, .m-details-page .slide {
+  min-height: 100vh;
+  width: 100vw;
+  scroll-snap-align: start;
+  padding: 4rem 2rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (min-width: 1024px) {
+  .b-details-page .slide, .m-details-page .slide {
+    padding: 4rem 6rem;
+  }
+}
+
+.b-details-page .fade-in, .m-details-page .fade-in {
+  animation: fadeIn 1s ease-out forwards;
+  opacity: 0;
+}
+.b-details-page .delay-1, .m-details-page .delay-1 { animation-delay: 0.3s; }
+.b-details-page .delay-2, .m-details-page .delay-2 { animation-delay: 0.6s; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* B Details Glass Card */
+.b-details-page .glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(232, 213, 209, 0.5);
+}
+
+/* Nav dots */
+.custom-nav-dots {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: fixed;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 50;
+}
+.b-details-page .nav-dot { width: 4px; height: 32px; background: rgba(45,55,72,0.1); border-radius: 4px; transition: all 0.3s; }
+.b-details-page .nav-dot:hover { background: var(--color-b-brand-rose); }
+.m-details-page .nav-dot { width: 4px; height: 32px; background: rgba(255,255,255,0.2); border-radius: 4px; transition: all 0.3s; }
+.m-details-page .nav-dot:hover { background: var(--color-m-brand-gold); }
+
+.b-details-page .bounce, .m-details-page .bounce { animation: bounce 2s infinite; }
+@keyframes bounce { 
+  0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
+  40% {transform: translateY(-10px);} 
+  60% {transform: translateY(-5px);} 
+}
+
+/* M Details specific */
+.m-details-page .glass-card {
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.m-details-page .gold-gradient-text {
+  background: linear-gradient(to right, #d4af37, #fdf0ba);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.m-details-page .animate-slide-up-loop { animation: slideUpLoop 4s cubic-bezier(0.4, 0, 0.2, 1) infinite; }
+@keyframes slideUpLoop {
+  0%, 20% { transform: translateY(0); opacity: 1; }
+  25%, 45% { transform: translateY(-100%); opacity: 1; }
+  50%, 70% { transform: translateY(-200%); opacity: 1; }
+  75%, 95% { transform: translateY(-300%); opacity: 1; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+.m-details-page .warning-pulse { animation: warningPulse 1.5s infinite; }
+@keyframes warningPulse {
+  0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); }
+  70% { box-shadow: 0 0 0 15px rgba(239, 68, 68, 0); border-color: rgba(239, 68, 68, 0.8); }
+  100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+}
+
+.m-details-page .success-pulse { animation: successPulse 2s infinite; }
+@keyframes successPulse {
+  0% { box-shadow: 0 0 0 0 rgba(180, 151, 90, 0.4); }
+  70% { box-shadow: 0 0 0 20px rgba(180, 151, 90, 0); border-color: rgba(180, 151, 90, 0.8); }
+  100% { box-shadow: 0 0 0 0 rgba(180, 151, 90, 0); }
 }
