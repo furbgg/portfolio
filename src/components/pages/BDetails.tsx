@@ -1,6 +1,8 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 export default function BDetails() {
+    const [lang, setLang] = useState<'tr' | 'de'>('tr');
+
     useEffect(() => {
         const dots = document.querySelectorAll('.b-details-page .nav-dot');
         const sections = document.querySelectorAll('.b-details-page .slide');
@@ -29,7 +31,7 @@ export default function BDetails() {
 
         sections.forEach(sec => observer.observe(sec));
         return () => observer.disconnect();
-    }, []);
+    }, [lang]); // Re-bind observer when language changes since DOM updates
 
     const handleWhatsApp = (e: React.MouseEvent) => {
         e.preventDefault();
@@ -40,13 +42,22 @@ export default function BDetails() {
             window.open('https://wa.me/436764732159', '_blank');
         } else {
             navigator.clipboard.writeText(number).then(() => {
-                alert('Numara kopyalandı: ' + number);
+                alert(lang === 'tr' ? 'Numara kopyalandı: ' + number : 'Nummer kopiert: ' + number);
             });
         }
     };
 
     return (
         <div className="b-details-page">
+            {/* Language Toggle */}
+            <div className="fixed top-4 right-4 z-[999] flex gap-2 bg-slate-900/80 p-1.5 rounded-full border border-slate-700/50 backdrop-blur-md">
+                <button onClick={() => setLang('tr')} className={`px-3 py-1 rounded-full text-xs font-bold transition-all ${lang === 'tr' ? 'bg-b-brand-gold text-slate-900' : 'text-slate-300 hover:text-white'}`}>TR</button>
+                <button onClick={() => setLang('de')} className={`px-3 py-1 rounded-full text-xs font-bold transition-all ${lang === 'de' ? 'bg-b-brand-gold text-slate-900' : 'text-slate-300 hover:text-white'}`}>DE</button>
+            </div>
+
+            {lang === 'tr' ? (
+                <>
+
             <div className="custom-nav-dots hidden md:flex">
                 <a href="#slide-1" className="nav-dot" title="Giriş"></a>
                 <a href="#slide-2" className="nav-dot" title="2"></a>
@@ -277,6 +288,244 @@ export default function BDetails() {
 
     
 
+        
+                </>
+            ) : (
+                <>
+
+            <div className="custom-nav-dots hidden md:flex">
+                <a href="#slide-1" className="nav-dot" title="Start"></a>
+                <a href="#slide-2" className="nav-dot" title="2"></a>
+                <a href="#slide-3" className="nav-dot" title="3"></a>
+                <a href="#slide-4" className="nav-dot" title="4"></a>
+                <a href="#slide-5" className="nav-dot" title="5"></a>
+                <a href="#slide-6" className="nav-dot" title="6"></a>
+            </div>
+            
+
+    
+
+    {/*  SLIDE 1: HOOK (Instagram to Global)  */}
+    <section id="slide-1" className="slide bg-cover bg-center" style={{backgroundImage: 'linear-gradient(to right, rgba(250, 249, 248, 0.95) 40%, rgba(250, 249, 248, 0.4)), url("https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&q=80")'}}>
+        <div className="max-w-6xl w-full fade-in relative z-10 mx-auto px-4 lg:px-0">
+            <span className="inline-block py-1 px-4 rounded-full bg-b-brand-blush text-b-brand-slate font-medium text-xs tracking-[0.3em] uppercase mb-8 border border-b-brand-rose">
+                Exklusiv für die österreichische Mode- und Boutique-Branche
+            </span>
+            <h1 className="font-serif text-5xl md:text-7xl mb-6 leading-tight text-b-brand-slate">
+                Von der Instagram-Boutique zur<br /><span className="text-b-brand-gold italic">globalen Marke.</span>
+            </h1>
+            <p className="text-lg md:text-xl text-slate-600 font-light mb-12 max-w-2xl leading-relaxed">
+                Sind Sie es leid, Hunderte von Nachrichten einzeln zu beantworten? Begrüßen Sie Ihre Follower mit einem professionellen, eleganten und eigenen E-Commerce-Shop, der europaweit verkauft.
+            </p>
+            
+            <a href="#slide-2" className="inline-flex items-center gap-2 bg-b-brand-slate hover:bg-black text-white font-medium py-4 px-10 rounded-full transition-all tracking-wide">
+                Entdecken Sie die Transformation <span className="material-symbols-outlined text-sm">arrow_downward</span>
+            </a>
+        </div>
+    </section>
+
+    {/*  SLIDE 2: THE INSTAGRAM/DM PROBLEM  */}
+    <section id="slide-2" className="slide bg-b-brand-soft">
+        <div className="max-w-6xl mx-auto w-full">
+            <div className="text-center mb-16 fade-in">
+                <h2 className="font-serif text-3xl md:text-5xl text-b-brand-slate mb-4">DM Üzerinden Satışın <br />Kayıp Maliyeti</h2>
+                <p className="text-slate-500 text-lg font-light max-w-2xl mx-auto">Sie haben treue Follower, aber die Bestellverwaltung ist im Chaos geendet.</p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+                <div className="glass-card p-10 rounded-[2rem] shadow-sm fade-in delay-1 hover:-translate-y-2 transition-transform text-center">
+                    <span className="material-symbols-outlined text-rose-400 text-4xl mb-6">forum</span>
+                    <h3 className="text-lg font-bold mb-4 text-b-brand-slate uppercase tracking-wide text-sm">"Haben Sie noch meine Größe?"</h3>
+                    <p className="text-slate-600 text-sm leading-relaxed">Indem Sie Kunden manuell über Bestand, Preis und Lieferzeit informieren, verlieren Sie den Fokus auf Ihr Kerngeschäft (Produktsuche). Sie verpassen Bestellungen um 3 Uhr nachts.</p>
+                </div>
+                
+                <div className="glass-card p-10 rounded-[2rem] shadow-sm fade-in delay-1 hover:-translate-y-2 transition-transform text-center">
+                    <span className="material-symbols-outlined text-slate-400 text-4xl mb-6">public_off</span>
+                    <h3 className="text-lg font-bold mb-4 text-b-brand-slate uppercase tracking-wide text-sm">Fehlendes Vertrauen und Prestige</h3>
+                    <p className="text-slate-600 text-sm leading-relaxed">Ein Neukunde aus Österreich oder Deutschland bricht den Kauf ab, wenn Sie keine professionelle Webadresse (Domain) haben und nur 'Überweisung per IBAN' anbieten.</p>
+                </div>
+                
+                <div className="glass-card p-10 rounded-[2rem] shadow-sm fade-in delay-2 hover:-translate-y-2 transition-transform text-center relative overflow-hidden">
+                    <div className="absolute inset-0 bg-b-brand-rose opacity-10"></div>
+                    <span className="material-symbols-outlined text-b-brand-gold text-4xl mb-6 relative z-10">language</span>
+                    <h3 className="text-lg font-bold mb-4 text-b-brand-slate uppercase tracking-wide text-sm relative z-10">Globale Auslandsgrenzen</h3>
+                    <p className="text-slate-600 text-sm leading-relaxed relative z-10">Viele Ihrer Follower sind im Ausland. Es ist mühsam, über DM Versandkosten zu erklären, zu übersetzen oder Euro-Zahlungen zu akzeptieren. Sie weisen 60% Ihres potenziellen Umsatzes ab.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {/*  SLIDE 3: WHAT WE OFFER (Elegance & Automation)  */}
+    <section id="slide-3" className="slide bg-b-brand-slate text-b-brand-soft">
+        <div className="max-w-6xl mx-auto w-full fade-in flex flex-col lg:flex-row gap-16 items-center">
+            <div className="lg:w-1/2 relative">
+                <div className="absolute inset-0 bg-gradient-to-tr from-b-brand-rose to-b-brand-gold opacity-10 blur-2xl rounded-full"></div>
+                <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&q=80" alt="Chic Fashion Concept" className="rounded-t-[10rem] rounded-b-[2rem] object-cover w-full h-[600px] border border-slate-700 relative z-10 shadow-2xl" />
+                {/*  Floating Element  */}
+                <div className="absolute -right-8 bottom-12 bg-white text-slate-800 p-4 rounded-xl shadow-xl z-20 flex items-center gap-4 fade-in delay-2">
+                    <span className="material-symbols-outlined text-b-brand-gold">shopping_bag</span>
+                    <div>
+                        <div className="text-xs text-slate-500">Österreich -&gt; Deutschland</div>
+                        <div className="font-bold text-sm">2 Bestellungen im Schlaf erhalten</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div className="lg:w-1/2">
+                <span className="text-b-brand-rose font-medium tracking-[0.2em] uppercase text-xs mb-4 block">24/7 Automatisierter Ablauf</span>
+                <h2 className="font-serif text-4xl md:text-5xl mb-8">Ein Einkaufs-Erlebnis, das nie schläft</h2>
+                
+                <div className="space-y-8">
+                    <div className="flex items-start gap-5">
+                        <div className="mt-1"><span className="material-symbols-outlined text-b-brand-gold text-3xl">auto_awesome</span></div>
+                        <div>
+                            <h4 className="font-bold text-lg text-b-brand-rose mb-1">Lassen Sie Ihren Kunden selbst einkaufen</h4>
+                            <p className="text-sm text-slate-400">Produktgrößen, Farben und Bestand sind im System. Der Besucher legt das Kleid in den Warenkorb, gibt die Versanddaten ein, und die Bestellbestätigung landet ohne Ihr Zutun auf Ihrem Handy.</p>
+                        </div>
+                    </div>
+                    <div className="flex items-start gap-5">
+                        <div className="mt-1"><span className="material-symbols-outlined text-b-brand-gold text-3xl">local_mall</span></div>
+                        <div>
+                            <h4 className="font-bold text-lg text-b-brand-rose mb-1">Warenkorb-Reservierung (Fast-Fashion)</h4>
+                            <p className="text-sm text-slate-400">Wenn 3 Personen gleichzeitig das letzte Kleidungsstück in den Warenkorb legen, ist das ein Problem. Unser System reserviert das 'Letzte Größe'-Kleid für 15 Minuten exklusiv für diese Person.</p>
+                        </div>
+                    </div>
+                    <div className="flex items-start gap-5">
+                        <div className="mt-1"><span className="material-symbols-outlined text-b-brand-gold text-3xl">translate</span></div>
+                        <div>
+                            <h4 className="font-bold text-lg text-b-brand-rose mb-1">3 Sprachen, weltweiter Versand</h4>
+                            <p className="text-sm text-slate-400">Ihre Seite funktioniert auf Deutsch, Englisch und Türkisch. Ein Kunde aus der Schweiz sieht die Sprache entsprechend und gibt seine Adresse einfach in das elegante Design ein.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {/*  SLIDE 4: ADMIN / EASE OF USE  */}
+    <section id="slide-4" className="slide">
+        <div className="max-w-6xl mx-auto w-full fade-in">
+            <div className="text-center mb-16">
+                <span className="text-b-brand-gold font-bold tracking-[0.2em] uppercase text-xs mb-4 block">Keine Programmierkenntnisse erforderlich</span>
+                <h2 className="font-serif text-4xl md:text-5xl text-b-brand-slate mb-6">Instagram Kullanmak Kadar Kolay<br />Bir Yönetim Paneli</h2>
+            </div>
+
+            <div className="bg-white rounded-[3rem] p-8 md:p-12 shadow-xl border border-b-brand-blush relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-64 h-64 bg-b-brand-blush rounded-full mix-blend-multiply filter blur-3xl opacity-70"></div>
+                
+                <div className="grid md:grid-cols-3 gap-12 relative z-10">
+                    <div className="space-y-4">
+                        <div className="w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center border border-slate-100">
+                            <span className="material-symbols-outlined text-slate-600">add_box</span>
+                        </div>
+                        <h4 className="font-bold text-b-brand-slate">Produkte via Smartphone hinzufügen</h4>
+                        <p className="text-sm text-slate-500 leading-relaxed">Fotografieren Sie das neu eingetroffene Produkt, wählen Sie Preis und Größe, und klicken Sie auf 'Veröffentlichen'. In Sekunden im Schaufenster.</p>
+                    </div>
+                    <div className="space-y-4">
+                        <div className="w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center border border-slate-100">
+                            <span className="material-symbols-outlined text-slate-600">notifications_active</span>
+                        </div>
+                        <h4 className="font-bold text-b-brand-slate">Warnung bei verspätetem Versand</h4>
+                        <p className="text-sm text-slate-500 leading-relaxed">Montag Bestellung erhalten, Mittwoch noch nicht versendet? Ihr Handy erhält eine rote Dringlichkeitswarnung: 'Versand verzögert!'.</p>
+                    </div>
+                    <div className="space-y-4">
+                        <div className="w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center border border-slate-100">
+                            <span className="material-symbols-outlined text-slate-600">brush</span>
+                        </div>
+                        <h4 className="font-bold text-b-brand-slate">Gestalten Sie Ihre eigene Startseite</h4>
+                        <p className="text-sm text-slate-500 leading-relaxed">Ändern Sie Ihr 'Frühlingskollektion'-Banner per Drag-and-Drop ohne Code. Verwalten Sie Kampagnen ohne Agenturen.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {/*  SLIDE 5: PRICING (The Clincher)  */}
+    <section id="slide-5" className="slide bg-white relative">
+        <div className="absolute inset-0 bg-b-brand-rose bg-opacity-5"></div>
+        <div className="max-w-5xl mx-auto w-full fade-in relative z-10">
+            <div className="text-center mb-16">
+                <h2 className="font-serif text-4xl md:text-5xl text-b-brand-slate mb-4">Langfristige und transparente Partnerschaft</h2>
+                <p className="text-slate-500 text-lg font-light">Im Vergleich zu unberechenbaren Budgets fertiger Plattformen: unser klares Preismodell, das das Wachstum Ihrer Marke unterstützt.</p>
+            </div>
+
+            <div className="bg-b-brand-slate text-white rounded-[3rem] p-8 md:p-12 shadow-2xl relative overflow-hidden border border-slate-700">
+                {/*  Gold ribbon  */}
+                <div className="absolute -right-16 top-10 bg-b-brand-gold text-b-brand-slate font-bold text-[10px] tracking-widest py-1 px-16 transform rotate-45 uppercase">
+                    TRANSPARENTE PREISBILDUNG
+                </div>
+                
+                <h3 className="font-serif text-2xl mb-8 border-b border-slate-700 pb-4">Elegantes Geschäft, geringe Investition</h3>
+                
+                <div className="grid md:grid-cols-2 gap-12">
+                    <div>
+                        <h4 className="text-rose-300 font-medium mb-4 uppercase tracking-widest text-xs">Traditionelle Plattformen (z. B. Shopify)</h4>
+                        <ul className="space-y-3 opacity-60">
+                            <li className="flex items-center gap-2 text-sm"><span className="text-red-400">✕</span> Jahresabo: Min. 1200€ / Jahr ständige Ausgabe</li>
+                            <li className="flex items-center gap-2 text-sm"><span className="text-red-400">✕</span> Gesetzliche Plugins (DSGVO/Abmahnschutz): Zusätzliche monatliche Kosten</li>
+                            <li className="flex items-center gap-2 text-sm"><span className="text-red-400">✕</span> Doppelte Provision: Sowohl Zahlungsprovider als auch Shopify berechnen Umsatzbeteiligung</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 className="text-b-brand-gold font-medium mb-4 flex items-center gap-2 uppercase tracking-widest text-xs">
+                            <span className="material-symbols-outlined text-base">verified</span> Unser Angebot
+                        </h4>
+                        <ul className="space-y-4">
+                            <li className="flex items-start gap-3">
+                                <span className="material-symbols-outlined text-emerald-400">task_alt</span>
+                                <div>
+                                    <span className="block font-bold">1.000€ - 1.500€</span>
+                                    <span className="text-xs text-slate-400">Einmalige Einrichtung (Gehört für immer Ihnen)</span>
+                                </div>
+                            </li>
+                            <li className="flex items-start gap-3">
+                                <span className="material-symbols-outlined text-emerald-400">task_alt</span>
+                                <div>
+                                    <span className="block font-bold">Wartung ab 75€ monatlich</span>
+                                    <span className="text-xs text-slate-400">Inklusive aller Server-, Sicherheits- und Supportkosten.</span>
+                                </div>
+                            </li>
+                            <li className="flex items-start gap-3">
+                                <span className="material-symbols-outlined text-emerald-400">task_alt</span>
+                                <div>
+                                    <span className="block font-bold">Keine doppelte Provisionen mehr</span>
+                                    <span className="text-xs text-slate-400">Sie zahlen keine Plattform-Umsatzgebühren wie bei Shopify. Nur der sichere Vermittler Stripe berechnet seine kleine Gebühr.</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {/*  SLIDE 6: CALL TO ACTION  */}
+    <section id="slide-6" className="slide bg-b-brand-blush border-t border-b-brand-rose">
+        <div className="max-w-4xl mx-auto w-full fade-in text-center">
+            <span className="material-symbols-outlined text-b-brand-gold text-5xl mb-6 bounce">diamond</span>
+            <h2 className="font-serif text-4xl md:text-6xl text-b-brand-slate mb-6 leading-tight">Markanızı Birlikte<br />Geleceğe Taşıyalım.</h2>
+            <p className="text-slate-600 text-lg mb-12 font-light">Der Übergang von einer Instagram-Boutique zu einer eleganten E-Commerce-Marke, die von Europäern respektiert wird, ist viel einfacher und günstiger als Sie denken.</p>
+            
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a onClick={handleWhatsApp} href="#" target="_blank" className="bg-green-600 hover:bg-green-500 text-white font-medium py-4 px-8 rounded-full transition-all tracking-wide shadow-xl hover:shadow-green-500/30 flex items-center gap-3">
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    Kontaktieren Sie uns per WhatsApp
+                </a>
+                <a href="mailto:furkanbgunaydin@gmail.com" className="border-2 border-b-brand-slate text-b-brand-slate hover:bg-b-brand-slate hover:text-white font-medium py-4 px-8 rounded-full transition-all tracking-wide shadow-lg flex items-center gap-3">
+                    <span className="material-symbols-outlined">mail</span>
+                    E-Mail Senden
+                </a>
+            </div>
+            <p className="mt-8 text-xs text-slate-400">Die Einrichtung dauert 3-6 Wochen, 100% konform mit österreichischen Standards.</p>
+        </div>
+    </section>
+
+    
+
+        
+                </>
+            )}
         </div>
     );
 }
