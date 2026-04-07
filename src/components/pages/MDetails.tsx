@@ -124,7 +124,7 @@ export default function MDetails() {
                         
                         {/*  Animated Box showing the limit hit  */}
                         <div className="bg-black/40 rounded-xl p-4 border border-slate-700 h-[180px] overflow-hidden relative">
-                            <div className="text-xs text-slate-500 mb-2 font-mono border-b border-slate-700 pb-2">Ürün Düzenleyici > Varyantlar</div>
+                            <div className="text-xs text-slate-500 mb-2 font-mono border-b border-slate-700 pb-2">Ürün Düzenleyici &gt; Varyantlar</div>
                             
                             <div className="space-y-4 pt-2">
                                 <div className="flex justify-between text-xs items-center bg-slate-800 p-2 rounded">

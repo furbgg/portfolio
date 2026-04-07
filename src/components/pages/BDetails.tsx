@@ -119,7 +119,7 @@ export default function BDetails() {
                 <div className="absolute -right-8 bottom-12 bg-white text-slate-800 p-4 rounded-xl shadow-xl z-20 flex items-center gap-4 fade-in delay-2">
                     <span className="material-symbols-outlined text-b-brand-gold">shopping_bag</span>
                     <div>
-                        <div className="text-xs text-slate-500">Avusturya -> Almanya</div>
+                        <div className="text-xs text-slate-500">Avusturya -&gt; Almanya</div>
                         <div className="font-bold text-sm">2 Sipariş Uyurken Alındı</div>
                     </div>
                 </div>
