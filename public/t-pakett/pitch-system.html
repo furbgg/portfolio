@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geleceğin E-Ticaret Altyapısı</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { 
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Plus Jakarta Sans', 'sans-serif']
+                    },
+                    colors: { 
+                        tech: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            900: '#0c4a6e',
+                            950: '#082f49'
+                        },
+                        dark: {
+                            900: '#0f172a',
+                            800: '#1e293b'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body, html { height: 100%; margin: 0; scroll-snap-type: y mandatory; overflow-x: hidden; background-color: #0f172a; color: #f8fafc; }
+        .slide { min-height: 100vh; width: 100vw; scroll-snap-align: start; padding: 4rem 2rem; position: relative; display: flex; flex-direction: column; justify-content: center; overflow: hidden; }
+        @media (min-width: 1024px) { .slide { padding: 4rem 6rem; } }
+        
+        .fade-in { animation: fadeIn 1s ease-out forwards; opacity: 0; }
+        .delay-1 { animation-delay: 0.3s; }
+        .delay-2 { animation-delay: 0.6s; }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .glass-panel { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.05); }
+        .gradient-text { background: linear-gradient(to right, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        
+        /* Nav Dots */
+        .nav-dots { display: flex; flex-direction: column; gap: 12px; position: fixed; right: 2rem; top: 50%; transform: translateY(-50%); z-index: 50; }
+        .nav-dot { width: 4px; height: 32px; background: rgba(255,255,255,0.15); border-radius: 4px; transition: all 0.3s; }
+        .nav-dot:hover { background: #38bdf8; }
+
+        /* Grid Background Pattern */
+        .bg-grid { background-size: 40px 40px; background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px); }
+        
+        .pulse-ring { animation: pulseRing 3s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+        @keyframes pulseRing {
+            0% { transform: scale(0.8); opacity: 0.5; }
+            100% { transform: scale(2); opacity: 0; }
+        }
+    </style>
+</head>
+<body class="selection:bg-tech-500 selection:text-white">
+
+    <div class="nav-dots hidden md:flex">
+        <a href="#slide-1" class="nav-dot" title="Giriş"></a>
+        <a href="#slide-2" class="nav-dot" title="Mimari Güç"></a>
+        <a href="#slide-3" class="nav-dot" title="Akıllı Özellikler"></a>
+        <a href="#slide-4" class="nav-dot" title="GEO & SEO"></a>
+        <a href="#slide-5" class="nav-dot" title="Sıfır Komisyon"></a>
+        <a href="#slide-6" class="nav-dot" title="İletişim"></a>
+    </div>
+
+    <!-- Floating Language Switcher -->
+    <div class="fixed top-6 right-6 lg:right-12 z-50 flex gap-2 bg-dark-800/80 backdrop-blur-md p-1.5 rounded-full border border-slate-700 shadow-xl">
+        <a href="pitch-system.html" class="px-3 py-1.5 text-xs font-bold rounded-full bg-tech-500 text-white transition-colors">TR</a>
+        <a href="pitch-system-en.html" class="px-3 py-1.5 text-xs font-bold rounded-full text-slate-400 hover:text-white transition-colors">EN</a>
+        <a href="pitch-system-de.html" class="px-3 py-1.5 text-xs font-bold rounded-full text-slate-400 hover:text-white transition-colors">DE</a>
+    </div>
+
+    <!-- Floating Contacts -->
+    <div class="fixed bottom-6 left-6 z-50 flex flex-col gap-3">
+        <a href="https://wa.me/43000000000" target="_blank" class="w-12 h-12 bg-emerald-500 hover:bg-emerald-400 text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-emerald-500/50 transition-all group relative">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            <span class="absolute left-14 bg-dark-800 text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 whitespace-nowrap transition-opacity pointer-events-none border border-slate-700 font-bold">WhatsApp Destek</span>
+        </a>
+        <a href="mailto:iletisim@sirketiniz.com" class="w-12 h-12 bg-tech-600 hover:bg-tech-500 text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-tech-500/50 transition-all group relative">
+            <span class="material-symbols-outlined">mail</span>
+            <span class="absolute left-14 bg-dark-800 text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 whitespace-nowrap transition-opacity pointer-events-none border border-slate-700 font-bold">E-Posta Gönder</span>
+        </a>
+    </div>
+
+    <!-- SLIDE 1: HOOK (The Vision) -->
+    <section id="slide-1" class="slide bg-dark-900 bg-grid relative">
+        <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-tech-600 rounded-full mix-blend-screen filter blur-[150px] opacity-20 animate-pulse"></div>
+        <div class="max-w-6xl mx-auto w-full fade-in relative z-10 text-center lg:text-left flex flex-col lg:flex-row items-center gap-16">
+            <div class="lg:w-3/5">
+                <span class="inline-block py-1.5 px-4 rounded-full bg-tech-950 text-tech-500 font-bold text-xs tracking-widest uppercase mb-6 border border-tech-500/30">
+                    Sistem Mimarisi Sunumu
+                </span>
+                <h1 class="font-display text-5xl md:text-7xl mb-6 leading-tight font-extrabold text-white">
+                    Sıradan Bir Web Sitesi Değil, <br><span class="gradient-text">Kendi Ekosisteminiz.</span>
+                </h1>
+                <p class="text-xl text-slate-400 font-light mb-10 max-w-2xl leading-relaxed mx-auto lg:mx-0">
+                    Abonelikli hazır şablonlarla (Shopify, WordPress) savaşmayı bırakın. Cironuza ortak olmayan, ultra hızlı ve Avrupa standartlarına tam uyumlu <strong>anahtar teslim e-ticaret altyapısını</strong> keşfedin.
+                </p>
+                
+                <a href="#slide-2" class="inline-flex items-center gap-3 bg-white hover:bg-slate-200 text-dark-900 font-bold py-4 px-8 rounded-full transition-all mt-4 transform hover:scale-105">
+                    Mimariyi İnceleyin <span class="material-symbols-outlined text-sm">arrow_downward</span>
+                </a>
+            </div>
+            
+            <div class="lg:w-2/5 relative hidden lg:block">
+                <div class="glass-panel p-6 rounded-3xl border border-slate-700 shadow-2xl transform rotate-3 hover:rotate-0 transition-all duration-500 relative z-20">
+                    <div class="flex items-center justify-between mb-6 pb-4 border-b border-slate-700">
+                        <div class="flex gap-2">
+                            <span class="w-3 h-3 rounded-full bg-red-500"></span><span class="w-3 h-3 rounded-full bg-yellow-500"></span><span class="w-3 h-3 rounded-full bg-green-500"></span>
+                        </div>
+                        <span class="text-xs text-tech-500 font-mono">Platform Command Center</span>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="h-2 bg-slate-700 rounded w-3/4"></div>
+                        <div class="h-2 bg-slate-700 rounded w-1/2"></div>
+                        <div class="h-2 bg-slate-700 rounded w-5/6"></div>
+                        <div class="mt-8 p-4 bg-emerald-500/10 rounded-xl border border-emerald-500/20 text-emerald-400 text-xs font-mono flex gap-2 items-center">
+                            <span class="material-symbols-outlined text-sm">check_circle</span>
+                            Sistem Optumize. Komisyon Kesintisi: %0
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 2: TECH STACK (Authority & Speed) -->
+    <section id="slide-2" class="slide bg-dark-800 relative z-10">
+        <div class="max-w-6xl mx-auto w-full">
+            <div class="text-center mb-16 fade-in">
+                <span class="text-tech-500 font-bold tracking-widest uppercase text-sm mb-4 block">Teknolojik Üstünlük</span>
+                <h2 class="font-display text-4xl md:text-5xl text-white mb-4 font-bold">Dünyanın En Büyüklerinin<br>Kullandığı Mimari</h2>
+                <p class="text-slate-400 text-lg max-w-2xl mx-auto">Sıradan panellere kurulan hantal eklentiler yerine, kurumsal seviyede kodlanmış, saf güç üreten bir sistem sunuyoruz.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="glass-panel p-8 rounded-3xl fade-in delay-1 border-t-4 border-t-tech-500">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-2xl font-bold text-white">Frontend: React.js</h3>
+                        <div class="bg-dark-900 px-3 py-1 rounded text-xs text-slate-400 font-mono">Görünüm Katmanı</div>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                        Netflix, Instagram ve Facebook'un kullandığı arayüz teknolojisi. Sayfa yenilenmeleri tarih olur, müşterileriniz ürünler arasında bir mobil uygulamada geziyormuş gibi milisaniyeler içinde geçiş yapar.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-sm text-slate-300"><span class="material-symbols-outlined text-tech-500 text-sm">flash_on</span> Geleneksel sitelere göre %300 daha hızlı tepki süresi.</li>
+                        <li class="flex items-center gap-3 text-sm text-slate-300"><span class="material-symbols-outlined text-tech-500 text-sm">devices</span> Responsive (Mobil ilk) kusursuz tasarım bütünlüğü.</li>
+                    </ul>
+                </div>
+                
+                <div class="glass-panel p-8 rounded-3xl fade-in delay-2 border-t-4 border-t-emerald-500">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-2xl font-bold text-white">Backend: Java Spring Boot</h3>
+                        <div class="bg-dark-900 px-3 py-1 rounded text-xs text-slate-400 font-mono">Motor Katmanı</div>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                        Avrupa bankalarının ve Amazon'un arka planında çalışan, dünyanın en güvenli ve stabil sunucu teknolojisi. Eşzamanlı 10.000 müşteri sitenize girse bile çökme yaşanmaz.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-sm text-slate-300"><span class="material-symbols-outlined text-emerald-500 text-sm">shield</span> Askeri standartlarda veri güvenliği şifrelemesi.</li>
+                        <li class="flex items-center gap-3 text-sm text-slate-300"><span class="material-symbols-outlined text-emerald-500 text-sm">dns</span> Kusursuz sepet ve envanter (stok) veritabanı yönetimi.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 3: SMART E-COMMERCE FEATURES (The Logic) -->
+    <section id="slide-3" class="slide bg-dark-900">
+        <div class="max-w-6xl mx-auto w-full fade-in flex flex-col justify-center">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-4xl md:text-5xl text-white mb-4 font-bold">Satış Uzmanı Gibi Düşünen <br><span class="gradient-text">Akıllı Algoritmalar</span></h2>
+                <p class="text-slate-400 text-lg">Sistemi işletme sahiplerinin en büyük acı noktalarını çözmek için eğittik.</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-3 gap-6 items-stretch">
+                <!-- Feature 1 -->
+                <div class="glass-panel p-8 rounded-[2rem] hover:bg-slate-800 transition-colors group">
+                    <div class="w-14 h-14 bg-blue-500/10 rounded-xl flex items-center justify-center mb-6 text-blue-400 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-3xl">timer</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">Sepet Rezervasyon Zekası</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">Stokta 1 adet kalan ürünü 3 farklı müşteri sepete ekleyemez. Sisteme giren ilk alıcı için stok arka planda 15 dakika boyunca bloke edilir (rezerv). Çifte satış kaosunu sıfırlar.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="glass-panel p-8 rounded-[2rem] hover:bg-slate-800 transition-colors group">
+                    <div class="w-14 h-14 bg-purple-500/10 rounded-xl flex items-center justify-center mb-6 text-purple-400 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-3xl">account_tree</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">Sınırsız Varyant Mantığı</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">Shopify gibi platformların 100 varyant sınırı yoktur. Bir ceketin rengi, bedeni, yaka tipi ve kumaşı üzerinden oluşacak binlerce kombinasyonu, sistemi zorlamadan tek tıkla yönetirsiniz.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="glass-panel p-8 rounded-[2rem] hover:bg-slate-800 transition-colors group relative overflow-hidden">
+                    <!-- Warning Pulse Background -->
+                    <div class="absolute -right-4 -top-4 w-24 h-24 bg-red-500/20 rounded-full blur-xl animate-pulse"></div>
+                    <div class="w-14 h-14 bg-red-500/10 rounded-xl flex items-center justify-center mb-6 text-red-400 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-3xl">local_shipping</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">Lojistik Alarm Sistemi</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">Sipariş alındıktan sonra 48 saat içinde kargoya verilmeyen paketleri sistem analiz eder. Admin panelinde "Acil Kargo Gecikmesi" uyarısı vererek müşteri şikayetlerini önler.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 4: GEO & COMPLIANCE (Future Proof & DACH Ready) -->
+    <section id="slide-4" class="slide bg-dark-800 bg-grid relative text-white">
+        <div class="max-w-6xl mx-auto w-full fade-in flex flex-col lg:flex-row items-center gap-16">
+            <div class="lg:w-1/2 order-2 lg:order-1">
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-dark-900 border border-emerald-500/30 p-6 rounded-3xl">
+                        <span class="material-symbols-outlined text-emerald-400 text-3xl mb-4">gavel</span>
+                        <h4 class="font-bold mb-2">DACH Uyumlu</h4>
+                        <p class="text-xs text-slate-400">Almanya ve Avusturya e-ticaret yasalarına (DSGVO, Impressum) direkt entegre. Abmahnung (yasal ceza) riski yok.</p>
+                    </div>
+                    <div class="bg-dark-900 border border-tech-500/30 p-6 rounded-3xl transform translate-y-6">
+                        <span class="material-symbols-outlined text-tech-400 text-3xl mb-4">public</span>
+                        <h4 class="font-bold mb-2">Native Çoklu Dil</h4>
+                        <p class="text-xs text-slate-400">İngilizce, Almanca ve Türkçe altyapı içinde gömülü gelir. Ziyaretçi diline göre otomatik sayfa adaptasyonu.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:w-1/2 order-1 lg:order-2">
+                <span class="text-emerald-400 font-bold tracking-[0.2em] uppercase text-xs mb-4 block flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Yapay Zeka Hazır
+                </span>
+                <h2 class="font-display text-4xl md:text-5xl mb-6 font-bold">SEO Bitti, Artık GEO Var.</h2>
+                <div class="space-y-6 text-slate-300">
+                    <p class="text-lg">Google'ın yeni yapay zeka arama motorlarına (Generative Engine Optimization) uyumlu mimari inşa ediyoruz.</p>
+                    <p class="text-sm text-slate-400">
+                        Sıradan siteler içerikleri HTML tabloları halinde sunarken; sistemimiz ürünlerinizi JSON-LD mikro verileri ve semantik etiketlerle analiz ederek yapay zeka asistanlarının (ChatGPT, Gemini) sizin ürününüzü okumasını ve tavsiye etmesini sağlar.
+                    </p>
+                    <div class="p-4 bg-slate-900 border-l-4 border-tech-500 rounded-r-xl">
+                        <p class="text-sm italic">"Rakipleriniz klasik Google sıralaması için savaşırken, siz yapay zekanın 1 numaralı marka tavsiyesi olacaksınız."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 5: PRICING PHILOSOPHY (The Clincher) -->
+    <section id="slide-5" class="slide bg-dark-900">
+        <div class="max-w-5xl mx-auto w-full fade-in">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-4xl md:text-5xl text-white mb-4 font-bold">Adil Fiyat, Tam Mülkiyet</h2>
+                <p class="text-slate-400 text-lg max-w-2xl mx-auto">Hazır platformların bitmek bilmeyen "gizli eklenti ücretleri" ve "satış komisyonlarına" karşı yegane savunmanız.</p>
+            </div>
+
+            <div class="glass-panel p-8 md:p-12 rounded-[3rem] border border-slate-700 shadow-2xl relative overflow-hidden">
+                <!-- Decorative glow -->
+                <div class="absolute -right-20 -top-20 w-64 h-64 bg-emerald-500 blur-[100px] opacity-20"></div>
+                
+                <div class="grid md:grid-cols-2 gap-12 relative z-10">
+                    <div>
+                        <h4 class="text-slate-500 font-bold mb-6 text-sm uppercase tracking-widest flex items-center gap-2">
+                            <span class="material-symbols-outlined">block</span> SaaS Tuzağı (Örn. Shopify)
+                        </h4>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3 opacity-60">
+                                <span class="text-red-400 font-bold">✕</span> 
+                                <span class="text-sm">Ödeme altyapısına ek olarak %2 Platform komisyonu kesilir.</span>
+                            </li>
+                            <li class="flex items-start gap-3 opacity-60">
+                                <span class="text-red-400 font-bold">✕</span> 
+                                <span class="text-sm">Avusturya yasalarına (DSGVO) uymak için ekstra App kiralamanız zorunludur.</span>
+                            </li>
+                            <li class="flex items-start gap-3 opacity-60">
+                                <span class="text-red-400 font-bold">✕</span> 
+                                <span class="text-sm">Abonelik iptalinde tüm siteniz ve müşteri algınız kaybolur, kodlar onlara aittir.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="border-l lg:border-slate-700 lg:pl-12 pt-8 lg:pt-0 border-t lg:border-t-0 border-slate-700">
+                        <h4 class="text-tech-400 font-bold mb-6 text-sm uppercase tracking-widest flex items-center gap-2">
+                            <span class="material-symbols-outlined">verified</span> Bizim Felsefemiz (Mülkiyet)
+                        </h4>
+                        <ul class="space-y-5">
+                            <li class="flex items-start gap-3">
+                                <span class="text-emerald-400 font-bold text-lg leading-none">✓</span> 
+                                <div>
+                                    <span class="block text-white font-bold text-sm">Sıfır Platform Komisyonu</span>
+                                    <span class="block text-xs text-slate-400 mt-1">Stripe vb. standart ödeme entegrasyonu dışında cironuza hiç kimse ortak olamaz.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-emerald-400 font-bold text-lg leading-none">✓</span> 
+                                <div>
+                                    <span class="block text-white font-bold text-sm">Kalıcı Mülkiyet, Sürpriz Yok</span>
+                                    <span class="block text-xs text-slate-400 mt-1">Eklenti kiralama stresi yok. Tüm gelişmiş modüller (Otomatik Dil, Varyant, SEO) core sistemin içine özel yazılmıştır.</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 6: CALL TO ACTION -->
+    <section id="slide-6" class="slide bg-dark-800 border-t border-slate-700">
+        <div class="max-w-4xl mx-auto w-full fade-in text-center">
+            <!-- Central icon with pulse -->
+            <div class="relative w-24 h-24 mx-auto mb-8">
+                <div class="absolute inset-0 bg-tech-500 rounded-full opacity-20 pulse-ring"></div>
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <span class="material-symbols-outlined text-tech-400 text-5xl">rocket_launch</span>
+                </div>
+            </div>
+            
+            <h2 class="font-display text-4xl md:text-6xl text-white mb-6 font-bold leading-tight">Yazılım Değil, <br>Dijital Hakimiyet Edinin.</h2>
+            <p class="text-slate-400 text-lg mb-12 font-light">Markanızı kiralık çadırlardan kurtarıp, dijital dünyada kendi mülkünüze taşıma vakti geldi. Hemen ücretsiz demo talep edin.</p>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-5">
+                <a href="https://wa.me/43000000000" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white font-medium py-4 px-10 rounded-full transition-all tracking-wide shadow-xl hover:shadow-emerald-500/30 flex items-center gap-3">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    WhatsApp İle Demo Talep Et
+                </a>
+                <a href="mailto:iletisim@sirketiniz.com" class="bg-dark-900 border border-slate-700 text-white hover:bg-slate-800 font-medium py-4 px-10 rounded-full transition-all flex items-center gap-3">
+                    <span class="material-symbols-outlined">mail</span>
+                    Detaylı Bilgi İçin E-Posta
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scroll detection script -->
+    <script>
+        const dots = document.querySelectorAll('.nav-dot');
+        const sections = document.querySelectorAll('.slide');
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.5
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const currentId = entry.target.getAttribute('id');
+                    dots.forEach(dot => {
+                        dot.style.background = dot.getAttribute('href') === '#' + currentId 
+                            ? '#38bdf8' 
+                            : 'rgba(255,255,255,0.15)';
+                    });
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(sec => observer.observe(sec));
+    </script>
+</body>
+</html>

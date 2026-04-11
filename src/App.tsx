@@ -17,6 +17,7 @@ function ScrollToTop() {
 import BDetails from "@/components/pages/BDetails";
 import MDetails from "@/components/pages/MDetails";
 import FDetails from "@/components/pages/FDetails";
+import TDetails from "@/components/pages/TDetails";
 
 export default function App() {
   return (
@@ -27,6 +28,7 @@ export default function App() {
         <Route path="/b-details" element={<BDetails />} />
         <Route path="/m-details" element={<MDetails />} />
         <Route path="/f-details" element={<FDetails />} />
+        <Route path="/t-details" element={<TDetails />} />
         
         {/* Normal layout with Header and Footer */}
         <Route
