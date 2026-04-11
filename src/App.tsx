@@ -16,6 +16,7 @@ function ScrollToTop() {
 
 import BDetails from "@/components/pages/BDetails";
 import MDetails from "@/components/pages/MDetails";
+import FDetails from "@/components/pages/FDetails";
 
 export default function App() {
   return (
@@ -25,6 +26,7 @@ export default function App() {
         {/* Full-page standalone pitch presentations without generic Header/Footer */}
         <Route path="/b-details" element={<BDetails />} />
         <Route path="/m-details" element={<MDetails />} />
+        <Route path="/f-details" element={<FDetails />} />
         
         {/* Normal layout with Header and Footer */}
         <Route
